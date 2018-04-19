@@ -26,7 +26,7 @@
         android:width="250dp"
         android:hint="@string/Codigo"
         android:textColor="@color/colorText"
-        android:textColorHint="@color/colorTextHind" />
+        android:textColorHint="@color/colorTextHint" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
         android:hint="@string/Contraseña"
         android:inputType="textPassword"
         android:textColor="@color/colorText"
-        android:textColorHint="@color/colorTextHind" />
+        android:textColorHint="@color/colorTextHint" />
 
     <Button
         android:layout_width="wrap_content"
@@ -56,6 +56,7 @@
             android:id="@+id/nuevo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="textClick"
             android:text="@string/Nuevo"
             android:textColor="@color/colorText" />
 

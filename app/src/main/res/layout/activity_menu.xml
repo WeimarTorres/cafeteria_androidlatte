@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pizarra"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.LoginActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/Menu"
+        android:textColor="@color/colorText"
+        android:textSize="40dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="121dp"
+            android:layout_height="88dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="30dp"
+            android:width="150dp"
+            android:background="@drawable/fcd6ccb4fee4157d8f2d249bfda64660"
+            android:text="@string/Desayuno"
+            android:textColor="@color/colorText"/>
+
+        <Button
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:width="150dp"
+            android:background="@color/colorButton"
+            android:text="@string/Almuerzo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="30dp"
+            android:width="150dp"
+            android:background="@color/colorButton"
+            android:text="@string/Merienda" />
+
+        <Button
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:width="150dp"
+            android:background="@color/colorButton"
+            android:text="@string/Combos" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:width="150dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorButton"
+        android:text="@string/Snacks" />/>
+
+
+</LinearLayout>
+

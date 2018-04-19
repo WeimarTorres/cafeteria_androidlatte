@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">App</string>
+    <string name="app_name">Cafetería</string>
     <string name="Codigo">Codigo UPB</string>
     <string name="Contraseña">Contraseña</string>
     <string name="Entrar">Entrar</string>
-    <string name="Nuevo">Nuevo?...</string>
+    <string name="Nuevo">Nuevo?</string>
 </resources>

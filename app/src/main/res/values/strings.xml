@@ -4,10 +4,4 @@
     <string name="Contraseña">Contraseña</string>
     <string name="Entrar">Entrar</string>
     <string name="Nuevo">Nuevo?</string>
-    <string name="Menu">Menu</string>string>
-    <string name="Desayuno">Desayuno</string>string>
-    <string name="Almuerzo">Almuerzo</string>string>
-    <string name="Merienda">Merienda</string>string>
-    <string name="Combos">Combos</string>string>
-    <string name="Snacks">Snacks</string>string>
 </resources>

@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
         />
 
     <TextView

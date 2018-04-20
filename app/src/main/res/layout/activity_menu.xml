@@ -32,7 +32,7 @@
 
         <Button
             android:layout_width="121dp"
-            android:layout_height="88dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_marginEnd="10dp"
             android:layout_marginLeft="65dp"
@@ -40,7 +40,6 @@
             android:layout_marginStart="65dp"
             android:layout_marginTop="30dp"
             android:width="150dp"
-            android:background="@drawable/fcd6ccb4fee4157d8f2d249bfda64660"
             android:text="@string/Desayuno"
             android:textColor="@color/colorText"/>
 
@@ -55,7 +54,6 @@
             android:layout_marginTop="30dp"
             android:width="150dp"
             android:text="@string/Almuerzo"
-            android:background="@drawable/fcd6ccb4fee4157d8f2d249bfda64660"
             android:textColor="@color/colorText"/>
 
     </LinearLayout>
@@ -76,7 +74,6 @@
             android:layout_marginTop="30dp"
             android:width="150dp"
             android:text="@string/Merienda"
-            android:background="@drawable/fcd6ccb4fee4157d8f2d249bfda64660"
             android:textColor="@color/colorText"/>
 
         <Button
@@ -90,7 +87,7 @@
             android:layout_marginTop="30dp"
             android:width="150dp"
             android:text="@string/Combos"
-            android:background="@drawable/fcd6ccb4fee4157d8f2d249bfda64660"
+
             android:textColor="@color/colorText"/>
 
     </LinearLayout>

@@ -11,4 +11,5 @@
     <string name="Combos">Combos</string>
     <string name="Snacks">Snacks</string>
     <string name="Salir">Salir?...</string>
+    <string name="Click">textClick</string>
 </resources>

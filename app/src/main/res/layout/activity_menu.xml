@@ -8,12 +8,6 @@
     android:orientation="vertical"
     tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.LoginActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:drawableLeft="@drawable/ic_person_black_24dp"
-        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,7 +35,7 @@
             android:layout_marginTop="30dp"
             android:width="150dp"
             android:text="@string/Desayuno"
-            android:textColor="@color/colorText"/>
+            android:background="@color/colorButton"/>
 
         <Button
             android:layout_width="121dp"
@@ -54,7 +48,7 @@
             android:layout_marginTop="30dp"
             android:width="150dp"
             android:text="@string/Almuerzo"
-            android:textColor="@color/colorText"/>
+            android:background="@color/colorButton"/>
 
     </LinearLayout>
 
@@ -74,7 +68,7 @@
             android:layout_marginTop="30dp"
             android:width="150dp"
             android:text="@string/Merienda"
-            android:textColor="@color/colorText"/>
+            android:background="@color/colorButton"/>
 
         <Button
             android:layout_width="121dp"
@@ -86,17 +80,16 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
             android:width="150dp"
-            android:text="@string/Combos"
-
-            android:textColor="@color/colorText"/>
+            android:background="@color/colorButton"
+            android:text="@string/Combos"/>
 
     </LinearLayout>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="331dp"
         android:layout_height="wrap_content"
-        android:width="150dp"
         android:layout_marginTop="10dp"
+        android:width="150dp"
         android:background="@color/colorButton"
         android:text="@string/Snacks" />
 

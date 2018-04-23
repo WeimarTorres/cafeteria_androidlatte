@@ -1,17 +1,14 @@
 <resources>
     <string name="app_name">Cafetería</string>
-    <string name="Usuario">Usuario</string>
+    <string name="Codigo">Codigo UPB</string>
     <string name="Contraseña">Contraseña</string>
     <string name="Entrar">Entrar</string>
-    <string name="Nuevo">Nuevo?...</string>
+    <string name="Nuevo">Nuevo?</string>
     <string name="Menu">Menu</string>
     <string name="Desayuno">Desayuno</string>
     <string name="Almuerzo">Almuerzo</string>
     <string name="Merienda">Merienda</string>
     <string name="Combos">Combos</string>
     <string name="Snacks">Snacks</string>
-    <string name="Salir">Salir?...</string>
-    <string name="Click">textClick</string>
-    <string name="Reservas">Reservas</string>
-    <string name="Información">Información</string>
+    <string name="Nuevo">Nuevo?...</string>
 </resources>

@@ -31,8 +31,7 @@
         android:background="@color/colorButton"
         android:width="150dp"
         android:height="120dp"
-        android:text="VER
-                    RESERVAS"
+        android:text="VER RESERVAS"
         android:textSize="28sp"/>
 
 </LinearLayout>

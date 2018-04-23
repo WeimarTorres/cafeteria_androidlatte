@@ -22,6 +22,7 @@
             android:textSize="40dp" />
 
         <EditText
+            android:id="@+id/usuarioRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -31,6 +32,7 @@
             android:textColorHint="@color/colorTextHint" />
 
         <EditText
+            android:id="@+id/codigoRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -40,6 +42,7 @@
             android:textColorHint="@color/colorTextHint" />
 
         <EditText
+            android:id="@+id/contraseñaRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -50,6 +53,8 @@
             android:textColorHint="@color/colorTextHint" />
 
         <Button
+            android:id="@+id/botónRegistro"
+            android:onClick="click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/colorButton"

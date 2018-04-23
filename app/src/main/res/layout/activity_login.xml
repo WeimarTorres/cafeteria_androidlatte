@@ -15,51 +15,45 @@
         android:layout_marginTop="40dp"
         android:text="@string/app_name"
         android:textColor="@color/colorText"
-        android:textSize="40dp" />
+        android:textSize="@dimen/titleText" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
-        android:width="250dp"
         android:hint="@string/Codigo"
         android:textColor="@color/colorText"
-        android:textColorHint="@color/colorTextHint" />
+        android:textColorHint="@color/colorTextHint"
+        android:textSize="@dimen/mediumText" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:width="250dp"
         android:hint="@string/Contraseña"
         android:inputType="textPassword"
         android:textColor="@color/colorText"
-        android:textColorHint="@color/colorTextHint" />
+        android:textColorHint="@color/colorTextHint"
+        android:textSize="@dimen/mediumText" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/entrar"
+        android:onClick="click"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="30dp"
-        android:width="150dp"
         android:background="@color/colorButton"
-        android:text="@string/Entrar" />
+        android:text="@string/Entrar"
+        android:textSize="@dimen/mediumText" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/nuevo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
-
-        <TextView
-            android:id="@+id/nuevo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="textClick"
-            android:text="@string/Nuevo"
-            android:textColor="@color/colorText" />
-
-    </LinearLayout>
+        android:onClick="click"
+        android:text="@string/Nuevo"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/mediumText" />
 
 </LinearLayout>

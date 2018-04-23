@@ -12,7 +12,8 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:drawableLeft="@drawable/ic_person_black_24dp" />
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -40,7 +41,7 @@
             android:layout_marginTop="30dp"
             android:width="150dp"
             android:text="@string/Desayuno"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorText"/>
 
         <Button
             android:layout_width="121dp"
@@ -53,7 +54,7 @@
             android:layout_marginTop="30dp"
             android:width="150dp"
             android:text="@string/Almuerzo"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorText"/>
 
     </LinearLayout>
 
@@ -73,7 +74,7 @@
             android:layout_marginTop="30dp"
             android:width="150dp"
             android:text="@string/Merienda"
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorText"/>
 
         <Button
             android:layout_width="121dp"
@@ -87,17 +88,18 @@
             android:width="150dp"
             android:text="@string/Combos"
 
-            android:textColor="@color/colorText" />
+            android:textColor="@color/colorText"/>
 
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:width="150dp"
+        android:layout_marginTop="10dp"
         android:background="@color/colorButton"
         android:text="@string/Snacks" />
+
 
 </LinearLayout>
 

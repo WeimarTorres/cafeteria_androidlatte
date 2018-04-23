@@ -6,4 +6,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorText">#d71d1d</color>
     <color name="colorTextHint">#121</color>
+    <color name="colorCheckBox">#7e18c6bd</color>
 </resources>

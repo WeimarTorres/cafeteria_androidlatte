@@ -23,7 +23,7 @@
         android:width="150dp"
         android:height="100dp"
         android:text="EDITAR"
-        android:textSize="28sp"/>
+        android:textSize="@dimen/bigTextBoton"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,7 +31,8 @@
         android:background="@color/colorButton"
         android:width="150dp"
         android:height="120dp"
-        android:text="VER RESERVAS"
-        android:textSize="28sp"/>
+        android:text="VER
+                    RESERVAS"
+        android:textSize="@dimen/bigTextBoton"/>
 
 </LinearLayout>

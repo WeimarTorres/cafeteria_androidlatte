@@ -12,14 +12,16 @@
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".MenuCaseActivity" />
-        <activity android:name=".SeleccionDeProductosActivity"></activity>
-        <activity android:name=".DisplayActivity"></activity>
+        <activity android:name=".SeleccionDeProductosActivity" />
+        <activity android:name=".DisplayActivity" />
+        <activity android:name=".SeleccionDeProductoCaseActivity"></activity>
     </application>
 
 </manifest>

@@ -5,6 +5,6 @@
     <color name="colorButton">#6ef47e</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorText">#d71d1d</color>
-    <color name="colorTextHint">#121</color>
+    <color name="colorTextHint">#f2f0f0</color>
     <color name="colorCheckBox">#7e18c6bd</color>
 </resources>

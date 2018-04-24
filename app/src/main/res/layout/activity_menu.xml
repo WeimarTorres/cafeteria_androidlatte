@@ -17,7 +17,7 @@
         android:layout_gravity="center"
         android:text="@string/Menu"
         android:textColor="@color/colorText"
-        android:textSize="40dp" />
+        android:textSize="@dimen/titleText"/>
 
 
     <LinearLayout
@@ -33,6 +33,7 @@
             android:layout_marginStart="63dp"
             android:layout_marginLeft="63dp"
             android:text="@string/Desayuno"
+            android:textSize="@dimen/mediumText"
             android:background="@color/colorButton"/>
 
         <Button
@@ -42,6 +43,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
             android:text="@string/Almuerzo"
+            android:textSize="@dimen/mediumText"
             android:background="@color/colorButton"/>
 
     </LinearLayout>
@@ -59,6 +61,7 @@
             android:layout_marginLeft="63dp"
             android:layout_marginTop="30dp"
             android:text="@string/Merienda"
+            android:textSize="@dimen/mediumText"
             android:background="@color/colorButton"/>
 
         <Button
@@ -68,6 +71,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
             android:background="@color/colorButton"
+            android:textSize="@dimen/mediumText"
             android:text="@string/Combos"/>
 
     </LinearLayout>
@@ -77,6 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@color/colorButton"
+        android:textSize="@dimen/mediumText"
         android:text="@string/Snacks" />
 
 

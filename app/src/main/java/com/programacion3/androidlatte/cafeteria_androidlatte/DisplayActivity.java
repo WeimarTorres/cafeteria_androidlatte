@@ -1,7 +1,9 @@
 package com.programacion3.androidlatte.cafeteria_androidlatte;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.LinkedList;
@@ -22,10 +24,15 @@ public class DisplayActivity extends AppCompatActivity {
 
         //algo con que llenar la lista va aqui, por ahora solo es lo mismo
         for(int i = 0; i<10; i++) {
-            itemList.add(new Item(i, "Comida", 20-i, R.drawable.hamburguesa, 0.99));
+            itemList.add(new Item(1, "Comida", 20-i, R.drawable.hamburguesa, 0.99));
         }
 
         ItemAdapter itemAdapter = new ItemAdapter(this, itemList);
         listView.setAdapter(itemAdapter);
+    }
+
+    public void click1(View view){
+        Intent intent = new Intent(this, SeleccionDeProductosActivity.class);
+        startActivity(intent);
     }
 }

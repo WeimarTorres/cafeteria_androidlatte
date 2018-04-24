@@ -31,10 +31,13 @@ public class MenuActivity extends AppCompatActivity {
         finish();
     }
 
-    public void onMenuItemClick(MenuItem item) {
+    public void onMenuItemClick(MenuItem item) {   }
 
+    public void click(View view){
+       Intent intent = new Intent(this, DisplayActivity.class);
+       // alguito que agregar aqui...
+       startActivity(intent);
     }
-
 
     public void onMenuClick(MenuItem item){
         switch (item.getItemId()) {

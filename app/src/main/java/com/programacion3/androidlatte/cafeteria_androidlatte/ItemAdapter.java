@@ -45,7 +45,7 @@ public class ItemAdapter extends BaseAdapter{
         convertView = inflater.inflate(R.layout.layout_list_item, null);
 
         TextView textView = convertView.findViewById(R.id.nombreItem);
-        textView.setText(itemList.get(i).getId());
+        textView.setText(itemList.get(i).getNombre());
 
         TextView textView1 = convertView.findViewById(R.id.precio);
         String precio = Double.toString(itemList.get(i).getPrecio());

@@ -19,7 +19,7 @@
             android:layout_marginTop="40dp"
             android:text="@string/app_name"
             android:textColor="@color/colorText"
-            android:textSize="40dp" />
+            android:textSize="@dimen/titleText" />
 
         <EditText
             android:id="@+id/usuarioRegistro"
@@ -30,6 +30,7 @@
             android:hint="Nombre"
             android:textStyle="italic"
             android:textColor="@color/colorText"
+            android:textSize="@dimen/mediumText"
             android:textColorHint="@color/colorTextHint" />
 
         <EditText
@@ -41,6 +42,7 @@
             android:hint="Codigo UPB"
             android:textStyle="italic"
             android:textColor="@color/colorText"
+            android:textSize="@dimen/mediumText"
             android:textColorHint="@color/colorTextHint" />
 
         <EditText
@@ -53,6 +55,7 @@
             android:textStyle="italic"
             android:inputType="textPassword"
             android:textColor="@color/colorText"
+            android:textSize="@dimen/mediumText"
             android:textColorHint="@color/colorTextHint" />
 
         <Button
@@ -63,7 +66,7 @@
             android:background="@color/colorButton"
             android:onClick="click"
             android:text="CREAR / REGISTER"
-            android:textSize="21sp" />
+            android:textSize="@dimen/mediumText" />
     </LinearLayout>
 
     <include

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DisplayActivity">
+    tools:context=".DisplayActivity"
+    android:background="@drawable/fondo_pizarra">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
             android:textSize="@dimen/titleText"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorTextHint"
             android:text="@string/Almuerzo"/>
 
         <ListView

@@ -23,41 +23,45 @@
 
         <EditText
             android:id="@+id/usuarioRegistro"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:width="250dp"
+            android:singleLine="true"
             android:hint="Nombre"
+            android:textStyle="italic"
             android:textColor="@color/colorText"
             android:textColorHint="@color/colorTextHint" />
 
         <EditText
             android:id="@+id/codigoRegistro"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:width="250dp"
+            android:singleLine="true"
             android:hint="Codigo UPB"
+            android:textStyle="italic"
             android:textColor="@color/colorText"
             android:textColorHint="@color/colorTextHint" />
 
         <EditText
             android:id="@+id/contraseñaRegistro"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:width="250dp"
+            android:singleLine="true"
             android:hint="Password"
+            android:textStyle="italic"
             android:inputType="textPassword"
             android:textColor="@color/colorText"
             android:textColorHint="@color/colorTextHint" />
 
         <Button
             android:id="@+id/botónRegistro"
-            android:onClick="click"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:background="@color/colorButton"
+            android:onClick="click"
             android:text="CREAR / REGISTER"
             android:textSize="21sp" />
     </LinearLayout>

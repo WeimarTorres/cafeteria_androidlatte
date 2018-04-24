@@ -20,4 +20,7 @@ public class MenuActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void onBackPressed() {
+    }
 }

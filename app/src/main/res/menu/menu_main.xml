@@ -2,7 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="@string/Reservas"/>
-    <item android:title="@string/Información"/>
-    <item android:title="@string/Salir"/>
+    <item android:title="@string/Salir"
+        android:id="@+id/itemDialog"
+        android:onClick="onMenuClick">
+    </item>
+    <item android:id="@+id/mainMenuInformacion"
+        android:onClick="onMenuItemClick"
+        android:title="@string/Información">
+        <menu>
+            <item android:id="@+id/nombre"
+                android:title="@string/Nombre">
+            </item>
+            <item android:id="@+id/apellido"
+                android:title="@string/Apellido">
+            </item>
+            <item android:id="@+id/codigo"
+                android:title="@string/Codigo">
+            </item>
+        </menu>
+
+    </item>
+
 
 </menu>

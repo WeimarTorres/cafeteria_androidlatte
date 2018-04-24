@@ -1,10 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_pizarra"
-    android:orientation="vertical"
     tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.SeleccionDeProductosActivity">
 
-</LinearLayout>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="HAMBURGUESA"
+            android:textColor="#0f74c6"
+            android:textSize="@dimen/titleText"/>
+
+        <ImageView
+            android:id="@+id/comida"
+            android:layout_width="170dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/hamburguesa"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Precio:"
+            android:textColor="#a4e91c"
+            android:textSize="@dimen/mediumText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripción: Hamburguesa con salsas y ensalada"
+            android:textColor="#47cc1f"
+            android:textSize="@dimen/mediumText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingredientes a escoger:"
+            android:textColor="#47cc1f"
+            android:textSize="@dimen/mediumText" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomate"
+            android:textColor="@color/colorCheckBox"
+            android:textSize="@dimen/mediumText"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lechuga"
+            android:textColor="@color/colorCheckBox"
+            android:textSize="@dimen/mediumText"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cebolla"
+            android:textColor="@color/colorCheckBox"
+            android:textSize="@dimen/mediumText"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Queso"
+            android:textColor="@color/colorCheckBox"
+            android:textSize="@dimen/mediumText"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salsa"
+            android:textColor="@color/colorCheckBox"
+            android:textSize="@dimen/mediumText" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Papas"
+            android:textColor="@color/colorCheckBox"
+            android:textSize="@dimen/mediumText"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pepinillo"
+            android:textColor="@color/colorCheckBox"
+            android:textSize="@dimen/mediumText"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aros de cebolla"
+            android:textColor="@color/colorCheckBox"
+            android:textSize="@dimen/mediumText" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repollo"
+            android:textColor="@color/colorCheckBox"
+            android:textSize="@dimen/mediumText" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/bigText"
+            android:text="ENVIAR"
+            android:background="@color/colorButton"
+            android:textSize="@dimen/bigTextBoton"/>
+
+    </LinearLayout>
+
+</ScrollView>

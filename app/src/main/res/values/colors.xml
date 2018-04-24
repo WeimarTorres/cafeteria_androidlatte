@@ -2,9 +2,10 @@
 <resources>
     <color name="colorPrimary">#453319</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorButton">#6ef47e</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorText">#d71d1d</color>
+    <color name="colorButton">#77b97f</color>
+    <color name="colorAccent">#d9e259</color>
+    <color name="colorText">#4f9cdf</color>
     <color name="colorTextHint">#f2f0f0</color>
     <color name="colorCheckBox">#7e18c6bd</color>
+    <color name="colorEscribir">#77b97f</color>
 </resources>

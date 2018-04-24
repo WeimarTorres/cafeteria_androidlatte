@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/hamburguesa"/>
+
+    <TextView
+        android:id="@+id/nombreItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Almuerzo"
+        android:textStyle="bold"
+        android:textSize="@dimen/bigText"
+        android:layout_toEndOf="@id/img"
+        android:layout_toRightOf="@id/img"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"/>
+
+    <ProgressBar
+        android:id="@+id/cantidad"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nombreItem"
+        android:layout_toEndOf="@id/img"
+        android:layout_toRightOf="@id/img"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/horario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/letra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

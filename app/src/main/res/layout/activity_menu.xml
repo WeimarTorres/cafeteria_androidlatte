@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         android:text="@string/Menu"
         android:textColor="@color/colorText"
         android:textSize="40dp" />
@@ -25,28 +26,21 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="121dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginLeft="65dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginStart="65dp"
             android:layout_marginTop="30dp"
-            android:width="150dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginLeft="63dp"
             android:text="@string/Desayuno"
             android:background="@color/colorButton"/>
 
         <Button
             android:layout_width="121dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginEnd="70dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="70dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:width="150dp"
             android:text="@string/Almuerzo"
             android:background="@color/colorButton"/>
 
@@ -61,25 +55,18 @@
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginLeft="65dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginStart="65dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginLeft="63dp"
             android:layout_marginTop="30dp"
-            android:width="150dp"
             android:text="@string/Merienda"
             android:background="@color/colorButton"/>
 
         <Button
             android:layout_width="121dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginEnd="70dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="70dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:width="150dp"
             android:background="@color/colorButton"
             android:text="@string/Combos"/>
 
@@ -89,7 +76,6 @@
         android:layout_width="331dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:width="150dp"
         android:background="@color/colorButton"
         android:text="@string/Snacks" />
 

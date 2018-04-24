@@ -14,4 +14,7 @@
     <string name="Usuario">Usuario</string>
     <string name="Reservas">Reservas</string>
     <string name="Información">Información</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Apellido">Apellido</string>
+    <string name="Código">Código</string>
 </resources>

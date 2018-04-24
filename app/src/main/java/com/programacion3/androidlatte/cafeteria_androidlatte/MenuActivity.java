@@ -1,9 +1,15 @@
 package com.programacion3.androidlatte.cafeteria_androidlatte;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -22,5 +28,39 @@ public class MenuActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        finish();
     }
+
+    public void onMenuItemClick(MenuItem item) {
+
+    }
+
+
+    public void onMenuClick(MenuItem item){
+        switch (item.getItemId()) {
+            case R.id.itemDialog: {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("IMPORTANTE!!");
+                builder.setMessage("Estas seguro que deseas salir?");
+                builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                        finish();
+                    }
+                });
+                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+                break;
+            }
+        }
+    }
+
 }

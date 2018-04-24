@@ -31,6 +31,7 @@
 
     <EditText
         android:id="@+id/contraseña"
+        android:maxLength="3"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/Contraseña"

@@ -33,10 +33,7 @@ public class Item {
         this.precio = precio;
     }
 
-    public String getDescripcion() {
-
-        return descripcion;
-    }
+    public String getDescripcion() { return descripcion; }
 
     public int getCant() {
         return cant;

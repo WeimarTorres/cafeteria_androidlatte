@@ -21,6 +21,13 @@
             android:textColor="@color/colorPrimary"
             android:text="@string/Almuerzo"/>
 
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lista1">
+
+        </ListView>
+
 
     </LinearLayout>
 

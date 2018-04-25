@@ -14,6 +14,7 @@ public class DisplayActivity extends AppCompatActivity {
     private ListView listView;
     private Memoria memoria;
     private List<Item> itemList = new LinkedList<>();
+    private static int SELECCION = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,22 @@ public class DisplayActivity extends AppCompatActivity {
     public void click1(View view){
         Intent intent = new Intent(this, SeleccionDeProductosActivity.class);
         intent.putExtra("memoria", memoria);
-        startActivity(intent);
+        startActivityForResult(intent, SELECCION);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == SELECCION) {
+            memoria = (Memoria) data.getSerializableExtra("memoria");
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("memoria", memoria);
+        setResult(RESULT_OK, resultIntent);
+        finish();
     }
 }

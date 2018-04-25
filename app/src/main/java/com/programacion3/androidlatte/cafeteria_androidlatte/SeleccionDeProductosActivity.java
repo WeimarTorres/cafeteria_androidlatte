@@ -34,6 +34,9 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
                     //TODO hacer que se pase de displayActivity el item seleccionado
                     memoria.setItemReserva(new Item(11, "comida", 2, R.drawable.hamburguesa, 3.0));
                     dialogInterface.dismiss();
+                    Intent resultIntent = new Intent();
+                    resultIntent.putExtra("memoria", memoria);
+                    setResult(RESULT_OK, resultIntent);
                     finish();
                 }
             });
@@ -49,4 +52,11 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("memoria", memoria);
+        setResult(RESULT_OK, resultIntent);
+        finish();
+    }
 }

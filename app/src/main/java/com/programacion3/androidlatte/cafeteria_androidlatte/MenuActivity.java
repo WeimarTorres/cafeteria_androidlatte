@@ -14,13 +14,13 @@ import android.widget.Toast;
 public class MenuActivity extends AppCompatActivity {
 
     private Memoria memoria;
+    private static int ALMUERZO = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         memoria = new Memoria();
-        memoria.setItemReserva(new Item(10, "comida", 1, R.drawable.hamburguesa, 3));
     }
 
     @Override
@@ -40,7 +40,15 @@ public class MenuActivity extends AppCompatActivity {
             intent = new Intent(this, DisplayActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
-            startActivity(intent);
+            startActivityForResult(intent, ALMUERZO);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == ALMUERZO) {
+            memoria = (Memoria) data.getSerializableExtra("memoria");
         }
     }
 

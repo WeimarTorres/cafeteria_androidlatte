@@ -5,7 +5,7 @@ public class Item {
     private int cant, img, id;
     private double precio;
 
-    public Item( int id, String descripcion, int cant, int img, double precio ){
+    public Item(int id, String descripcion, int cant, int img, double precio) {
         this.id = id;
         this.descripcion = descripcion;
         this.cant = cant;
@@ -33,7 +33,9 @@ public class Item {
         this.precio = precio;
     }
 
-    public String getDescripcion() { return descripcion; }
+    public String getDescripcion() {
+        return descripcion;
+    }
 
     public int getCant() {
         return cant;

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/Reservas"/>
+    <item android:title="@string/Reservas"
+        android:id="@+id/itemReservas"
+        android:onClick="onMenuClick">
+    </item>
     <item android:title="@string/Salir"
         android:id="@+id/itemDialog"
         android:onClick="onMenuClick">
     </item>
     <item android:id="@+id/mainMenuInformacion"
-        android:onClick="onMenuItemClick"
+        android:onClick="onMenuClick"
         android:title="@string/Información">
         <menu>
             <item android:id="@+id/nombre"

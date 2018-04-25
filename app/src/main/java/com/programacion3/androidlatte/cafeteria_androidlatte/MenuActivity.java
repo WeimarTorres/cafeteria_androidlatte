@@ -38,6 +38,7 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent;
         if (view.getId() == R.id.almuerzo) {
             intent = new Intent(this, DisplayActivity.class);
+            intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
             startActivity(intent);
         }
@@ -60,11 +61,12 @@ public class MenuActivity extends AppCompatActivity {
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
                 }
+
             });
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
         } else if (item.getItemId() == R.id.itemReservas) {
-            Intent intent = new Intent(this, RegisterActivity.class);
+            Intent intent = new Intent(this, ReservasActivity.class);
             intent.putExtra("memoria", memoria);
             startActivity(intent);
         }

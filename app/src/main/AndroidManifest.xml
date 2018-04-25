@@ -21,6 +21,7 @@
         <activity android:name=".MenuCaseActivity" />
         <activity android:name=".SeleccionDeProductosActivity" />
         <activity android:name=".DisplayActivity" />
+        <activity android:name=".ReservasActivity"/>
     </application>
 
 </manifest>

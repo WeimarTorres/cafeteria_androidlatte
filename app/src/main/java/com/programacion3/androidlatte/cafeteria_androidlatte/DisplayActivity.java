@@ -11,9 +11,9 @@ import java.util.List;
 
 public class DisplayActivity extends AppCompatActivity {
 
-    ListView listView;
-
-    List<Item> itemList = new LinkedList<>();
+    private ListView listView;
+    private Memoria memoria;
+    private List<Item> itemList = new LinkedList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,9 @@ public class DisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display);
 
         listView = findViewById(R.id.lista1);
+
+        Intent intent = getIntent();
+        memoria = (Memoria)intent.getSerializableExtra("memoria");
 
         //algo con que llenar la lista va aqui, por ahora solo es lo mismo
         for(int i = 0; i<10; i++) {
@@ -33,6 +36,7 @@ public class DisplayActivity extends AppCompatActivity {
 
     public void click1(View view){
         Intent intent = new Intent(this, SeleccionDeProductosActivity.class);
+        intent.putExtra("memoria", memoria);
         startActivity(intent);
     }
 }

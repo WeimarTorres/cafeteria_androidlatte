@@ -4,14 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class ReservasActivity extends AppCompatActivity {
 
-    ListView listView;
-    List<Item> list;
+    private ListView listView;
+    private List<Item> list;
+    private Memoria memoria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,7 @@ public class ReservasActivity extends AppCompatActivity {
         listView = findViewById(R.id.ListView);
 
         Intent intent = getIntent();
-        Memoria memoria = (Memoria) intent.getSerializableExtra("Memoria");
+        memoria = (Memoria) intent.getSerializableExtra("memoria");
         this.list = memoria.getListaItemReservado();
 
         ItemAdapter itemAdapter = new ItemAdapter(this, list);

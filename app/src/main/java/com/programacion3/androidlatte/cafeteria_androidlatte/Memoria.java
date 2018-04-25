@@ -23,7 +23,13 @@ public class Memoria implements Serializable {
     }
 
     public void setItemReserva(Item item) {
-        listaItemReservado.add(item);
+        listaItemReservado.add(numero(), item);
+    }
+
+    private int numero() {
+        int i = numeroItemReservado;
+        numeroItemReservado++;
+        return i;
     }
 
 }

@@ -1,6 +1,8 @@
 package com.programacion3.androidlatte.cafeteria_androidlatte;
 
-public class Item {
+import java.io.Serializable;
+
+public class Item implements Serializable{
     private String nombre;
     private int cant, img, id;
     private double precio;

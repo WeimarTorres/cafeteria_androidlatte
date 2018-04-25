@@ -26,6 +26,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/desayuno"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -34,9 +35,11 @@
             android:layout_marginLeft="63dp"
             android:text="@string/Desayuno"
             android:textSize="@dimen/mediumText"
-            android:background="@color/colorButton"/>
+            android:background="@color/colorButton"
+            android:onClick="click"/>
 
         <Button
+            android:id="@+id/almuerzo"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -44,7 +47,8 @@
             android:layout_marginTop="30dp"
             android:text="@string/Almuerzo"
             android:textSize="@dimen/mediumText"
-            android:background="@color/colorButton"/>
+            android:background="@color/colorButton"
+            android:onClick="click"/>
 
     </LinearLayout>
 
@@ -54,6 +58,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/merienda"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
@@ -62,9 +67,11 @@
             android:layout_marginTop="30dp"
             android:text="@string/Merienda"
             android:textSize="@dimen/mediumText"
-            android:background="@color/colorButton"/>
+            android:background="@color/colorButton"
+            android:onClick="click"/>
 
         <Button
+            android:id="@+id/combos"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -72,17 +79,20 @@
             android:layout_marginTop="30dp"
             android:background="@color/colorButton"
             android:textSize="@dimen/mediumText"
-            android:text="@string/Combos"/>
+            android:text="@string/Combos"
+            android:onClick="click"/>
 
     </LinearLayout>
 
     <Button
+        android:id="@+id/snacks"
         android:layout_width="331dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@color/colorButton"
         android:textSize="@dimen/mediumText"
-        android:text="@string/Snacks" />
+        android:text="@string/Snacks"
+        android:onClick="click"/>
 
 
 </LinearLayout>

@@ -1,20 +1,20 @@
 package com.programacion3.androidlatte.cafeteria_androidlatte;
 
 public class Item {
-    private String descripcion;
+    private String nombre;
     private int cant, img, id;
     private double precio;
 
-    public Item(int id, String descripcion, int cant, int img, double precio) {
+    public Item( int id, String nombre, int cant, int img, double precio ){
         this.id = id;
-        this.descripcion = descripcion;
+        this.nombre = nombre;
         this.cant = cant;
         this.img = img;
         this.precio = precio;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public void setCant(int cant) {
@@ -33,9 +33,7 @@ public class Item {
         this.precio = precio;
     }
 
-    public String getDescripcion() {
-        return descripcion;
-    }
+    public String getNombre() { return nombre; }
 
     public int getCant() {
         return cant;

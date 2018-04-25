@@ -34,12 +34,13 @@ public class MenuActivity extends AppCompatActivity {
     public void onBackPressed() {
     }
 
-    public void onMenuItemClick(MenuItem item) {   }
-
-    public void click(View view){
-       Intent intent = new Intent(this, DisplayActivity.class);
-       // alguito que agregar aqui...
-       startActivity(intent);
+    public void click(View view) {
+        Intent intent;
+        if (view.getId() == R.id.almuerzo) {
+            intent = new Intent(this, DisplayActivity.class);
+            // TODO alguito que agregar aqui...
+            startActivity(intent);
+        }
     }
 
     public void onMenuClick(MenuItem item) {

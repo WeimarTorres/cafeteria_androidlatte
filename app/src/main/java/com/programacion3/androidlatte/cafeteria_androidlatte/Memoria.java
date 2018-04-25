@@ -13,6 +13,7 @@ public class Memoria implements Serializable {
     private List<Item> listaItemReservado = new LinkedList<Item>();
     private List<Item> listaItemDisponible = new LinkedList<Item>();
     private int numeroItemReservado = 0;
+    private int numeroItemDisponible = 0;
 
     public List<Item> getListaItemReservado() {
         return listaItemReservado;
@@ -23,12 +24,22 @@ public class Memoria implements Serializable {
     }
 
     public void setItemReserva(Item item) {
-        listaItemReservado.add(numero(), item);
+        listaItemReservado.add(numeroReservado(), item);
     }
 
-    private int numero() {
+    public void setItemDisponible(Item item) {
+        listaItemDisponible.add(numeroDisponible(), item);
+    }
+
+    private int numeroReservado() {
         int i = numeroItemReservado;
         numeroItemReservado++;
+        return i;
+    }
+
+    private int numeroDisponible() {
+        int i = numeroItemDisponible;
+        numeroItemDisponible++;
         return i;
     }
 

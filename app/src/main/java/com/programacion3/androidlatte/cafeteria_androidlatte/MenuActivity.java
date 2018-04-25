@@ -21,6 +21,10 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         memoria = new Memoria();
+        memoria.setItemDisponible(new Item(1,"Hamburguesa", 50, R.drawable.hamburguesa, 15));
+        memoria.setItemDisponible(new Item(2, "Soda", 100, R.drawable.soda, 5));
+        memoria.setItemDisponible(new Item(1,"Hamburguesa", 50, R.drawable.hamburguesa, 15));
+        memoria.setItemDisponible(new Item(2, "Soda", 100, R.drawable.soda, 5));
     }
 
     @Override

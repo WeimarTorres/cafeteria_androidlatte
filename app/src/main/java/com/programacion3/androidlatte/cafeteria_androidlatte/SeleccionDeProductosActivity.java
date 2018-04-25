@@ -6,12 +6,19 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 public class SeleccionDeProductosActivity extends AppCompatActivity {
 
     private Memoria memoria;
+    private Item itemSeleccionado;
+    private TextView nombre;
+    private TextView precio;
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +27,16 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         memoria = (Memoria) intent.getSerializableExtra("memoria");
+        itemSeleccionado = (Item) intent.getSerializableExtra("itemSeleccionado");
+
+        nombre = findViewById(R.id.nombreSeleccion);
+        precio =findViewById(R.id.precioSeleccion);
+
+        nombre.setText(itemSeleccionado.getNombre());
+        precio.setText("Precio: " + String.valueOf(itemSeleccionado.getPrecio()));
+
+        imageView = findViewById(R.id.imagen);
+        imageView.setImageResource(itemSeleccionado.getImg());
 
     }
 
@@ -32,7 +49,7 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     //TODO hacer que se pase de displayActivity el item seleccionado
-                    memoria.setItemReserva(new Item(11, "comida", 2, R.drawable.hamburguesa, 3.0));
+                    memoria.setItemReserva(itemSeleccionado);
                     dialogInterface.dismiss();
                     Intent resultIntent = new Intent();
                     resultIntent.putExtra("memoria", memoria);

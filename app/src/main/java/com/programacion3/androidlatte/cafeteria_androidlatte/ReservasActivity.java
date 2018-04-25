@@ -32,7 +32,7 @@ public class ReservasActivity extends AppCompatActivity {
 
     }
 
-    public void click1(View view) {
+    public void click(View view) {
 
     }
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.LinkedList;
@@ -13,7 +14,7 @@ public class DisplayActivity extends AppCompatActivity {
 
     private ListView listView;
     private Memoria memoria;
-    private List<Item> itemList = new LinkedList<>();
+    private List<Item> itemList;
     private static int SELECCION = 2;
 
     @Override
@@ -25,20 +26,22 @@ public class DisplayActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         memoria = (Memoria)intent.getSerializableExtra("memoria");
-
-        //algo con que llenar la lista va aqui, por ahora solo es lo mismo
-        for(int i = 0; i<10; i++) {
-            itemList.add(new Item(1, "Comida", 20-i, R.drawable.hamburguesa, 0.99));
-        }
+        itemList = memoria.getListaItemDisponible();
 
         ItemAdapter itemAdapter = new ItemAdapter(this, itemList);
         listView.setAdapter(itemAdapter);
-    }
 
-    public void click1(View view){
-        Intent intent = new Intent(this, SeleccionDeProductosActivity.class);
-        intent.putExtra("memoria", memoria);
-        startActivityForResult(intent, SELECCION);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(DisplayActivity.this, SeleccionDeProductosActivity.class);
+                intent.putExtra("memoria", memoria);
+                Item item = (Item) adapterView.getItemAtPosition(i);
+                intent.putExtra("itemSeleccionado", item);
+                startActivityForResult(intent, SELECCION);
+            }
+        });
+
     }
 
     @Override

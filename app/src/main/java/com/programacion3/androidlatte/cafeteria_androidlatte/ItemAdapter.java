@@ -37,19 +37,19 @@ public class ItemAdapter extends BaseAdapter{
 
     @Override
     public long getItemId(int i) {
-        return 0;
+        return itemList.get(i).getId();
     }
 
     @Override
     public View getView(int i, View convertView, ViewGroup parent) {
         convertView = inflater.inflate(R.layout.layout_list_item, null);
 
-        TextView textView = convertView.findViewById(R.id.nombreItem);
+        TextView textView = convertView.findViewById(R.id.NombreItem);
         textView.setText(itemList.get(i).getNombre());
 
         TextView textView1 = convertView.findViewById(R.id.precio);
         String precio = Double.toString(itemList.get(i).getPrecio());
-        textView.setText(precio);
+        textView1.setText(precio);
 
         ImageView imageView = convertView.findViewById(R.id.img);
         imageView.setImageResource(itemList.get(i).getImg());

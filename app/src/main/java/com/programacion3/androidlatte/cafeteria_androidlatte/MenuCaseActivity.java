@@ -8,8 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MenuCaseActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,21 @@ public class MenuCaseActivity extends AppCompatActivity {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+    }
+
+    public void click(View view) {
+        Intent intent;
+        if (view.getId() == R.id.editar) {
+            intent = new Intent(this, EditarMenuDelDiaActivity.class);
+            startActivity(intent);
+        } else if(view.getId() == R.id.reservas) {
+            intent = new Intent(this, ReservasCaseActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void onMenuClick(MenuItem item){
@@ -48,7 +65,7 @@ public class MenuCaseActivity extends AppCompatActivity {
 
                 break;
             } case R.id.itemReservas: {
-                //TODO memoria}
+                //TODO memoria
                 break;
             }
         }

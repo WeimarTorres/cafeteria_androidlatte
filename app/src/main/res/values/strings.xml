@@ -10,9 +10,10 @@
     <string name="Combos">Combos</string>
     <string name="Snacks">Snacks</string>
     <string name="Nuevo">Nuevo?...</string>
-    <string name="Salir">Salir?...</string>
+    <string name="Salir">Cerrar Sesion</string>
     <string name="Usuario">Usuario</string>
     <string name="Reservas">Reservas</string>
+    <string name="Editar">Editar</string>
     <string name="Información">Información</string>
     <string name="Nombre">Nombre</string>
     <string name="Apellido">Apellido</string>

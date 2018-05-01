@@ -7,11 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import java.util.LinkedList;
 import java.util.List;
 
-public class DisplayActivity extends AppCompatActivity {
-
+public class DisplaySnacksActivity extends AppCompatActivity {
     private ListView listView;
     private Memoria memoria;
     private List<Item> itemList;
@@ -20,7 +18,7 @@ public class DisplayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display);
+        setContentView(R.layout.activity_display_snacks);
 
         listView = findViewById(R.id.lista1);
 
@@ -34,7 +32,7 @@ public class DisplayActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(DisplayActivity.this, SeleccionDeProductosActivity.class);
+                Intent intent = new Intent(DisplaySnacksActivity.this, SeleccionDeProductosActivity.class);
                 intent.putExtra("memoria", memoria);
                 Item item = (Item) adapterView.getItemAtPosition(i);
                 intent.putExtra("itemSeleccionado", item);

@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -41,7 +40,27 @@ public class MenuActivity extends AppCompatActivity {
     public void click(View view) {
         Intent intent;
         if (view.getId() == R.id.almuerzo) {
-            intent = new Intent(this, DisplayActivity.class);
+            intent = new Intent(this, DisplayAlmuerzoActivity.class);
+            intent.putExtra("memoria", memoria);
+            // TODO alguito que agregar aqui...
+            startActivityForResult(intent, ALMUERZO);
+        } else if(view.getId() == R.id.desayuno){
+            intent = new Intent(this, DisplayAlmuerzoActivity.class);
+            intent.putExtra("memoria", memoria);
+            // TODO alguito que agregar aqui...
+            startActivityForResult(intent, ALMUERZO);
+        } else if(view.getId() == R.id.merienda){
+            intent = new Intent(this, DisplayAlmuerzoActivity.class);
+            intent.putExtra("memoria", memoria);
+            // TODO alguito que agregar aqui...
+            startActivityForResult(intent, ALMUERZO);
+        } else if(view.getId() == R.id.combos){
+            intent = new Intent(this, DisplayAlmuerzoActivity.class);
+            intent.putExtra("memoria", memoria);
+            // TODO alguito que agregar aqui...
+            startActivityForResult(intent, ALMUERZO);
+        } else if(view.getId() == R.id.snacks){
+            intent = new Intent(this, DisplayAlmuerzoActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, ALMUERZO);
@@ -55,6 +74,7 @@ public class MenuActivity extends AppCompatActivity {
             memoria = (Memoria) data.getSerializableExtra("memoria");
         }
     }
+
 
     public void onMenuClick(MenuItem item) {
         if (item.getItemId() == R.id.itemDialog) {

@@ -20,11 +20,15 @@
         <activity android:name=".MenuActivity" />
         <activity android:name=".MenuCaseActivity" />
         <activity android:name=".SeleccionDeProductosActivity" />
-        <activity android:name=".DisplayActivity" />
+        <activity android:name=".DisplayAlmuerzoActivity" />
         <activity android:name=".ReservasActivity" />
         <activity android:name=".ReservasCaseActivity" />
         <activity android:name=".EdicionDeProductosActivity" />
-        <activity android:name=".EditarMenuDelDiaActivity"></activity>
+        <activity android:name=".EditarMenuDelDiaActivity" />
+        <activity android:name=".DisplayDesayunoActivity" />
+        <activity android:name=".DisplayMeriendaActivity" />
+        <activity android:name=".DisplayCombosActivity" />
+        <activity android:name=".DisplaySnacksActivity"></activity>
     </application>
 
 </manifest>

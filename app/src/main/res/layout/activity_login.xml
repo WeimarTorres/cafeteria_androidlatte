@@ -32,16 +32,16 @@
 
     <EditText
         android:id="@+id/contraseña"
-        android:maxLength="3"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/Contraseña"
-        android:singleLine="true"
-        android:textStyle="italic"
         android:inputType="textPassword"
+        android:maxLength="3"
+        android:singleLine="true"
         android:textColor="@color/colorEscribir"
         android:textColorHint="@color/colorTextHint"
-        android:textSize="@dimen/mediumText" />
+        android:textSize="@dimen/mediumText"
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/entrar"

@@ -17,4 +17,5 @@
     <string name="Nombre">Nombre</string>
     <string name="Apellido">Apellido</string>
     <string name="Código">Código</string>
+    <string name="title_activity_reservas_case">ReservasCaseActivity</string>
 </resources>

@@ -45,22 +45,22 @@ public class MenuActivity extends AppCompatActivity {
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, ALMUERZO);
         } else if(view.getId() == R.id.desayuno){
-            intent = new Intent(this, DisplayAlmuerzoActivity.class);
+            intent = new Intent(this, DisplayDesayunoActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, ALMUERZO);
         } else if(view.getId() == R.id.merienda){
-            intent = new Intent(this, DisplayAlmuerzoActivity.class);
+            intent = new Intent(this, DisplayMeriendaActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, ALMUERZO);
         } else if(view.getId() == R.id.combos){
-            intent = new Intent(this, DisplayAlmuerzoActivity.class);
+            intent = new Intent(this, DisplayCombosActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, ALMUERZO);
         } else if(view.getId() == R.id.snacks){
-            intent = new Intent(this, DisplayAlmuerzoActivity.class);
+            intent = new Intent(this, DisplaySnacksActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, ALMUERZO);

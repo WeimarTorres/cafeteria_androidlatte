@@ -39,6 +39,7 @@
             android:drawableTop="@drawable/sandwich"
             android:onClick="click"
             android:text="Desayuno"
+            android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -55,6 +56,7 @@
             android:drawableTop="@drawable/pollo"
             android:onClick="click"
             android:text="Almuerzo"
+            android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -79,6 +81,7 @@
             android:drawableTop="@drawable/merienda"
             android:onClick="click"
             android:text="Merienda"
+            android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -94,6 +97,7 @@
             android:drawableTop="@drawable/combos"
             android:onClick="click"
             android:text="Combos"
+            android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -111,6 +115,7 @@
         android:background="@drawable/smooth_square"
         android:onClick="click"
         android:text="Snacks"
+        android:textColor="#ffff"
         android:textSize="20sp"
         style="@style/Widget.AppCompat.Button.Borderless"/>
 

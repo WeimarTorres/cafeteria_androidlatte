@@ -22,77 +22,97 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="124dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/desayuno"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="121dp"
+            android:layout_height="100dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="63dp"
             android:layout_marginLeft="63dp"
-            android:text="@string/Desayuno"
-            android:textSize="@dimen/mediumText"
-            android:background="@color/colorButton"
-            android:onClick="click"/>
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/smooth_square"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/sandwich"
+            android:onClick="click"
+            android:text="Desayuno"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/almuerzo"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="121dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:text="@string/Almuerzo"
-            android:textSize="@dimen/mediumText"
-            android:background="@color/colorButton"
-            android:onClick="click"/>
+            android:background="@drawable/smooth_square"
+            android:drawablePadding="1dp"
+            android:drawableTop="@drawable/pollo"
+            android:onClick="click"
+            android:text="Almuerzo"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="124dp"
+        android:layout_height="135dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/merienda"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="121dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginStart="63dp"
             android:layout_marginLeft="63dp"
+            android:layout_marginStart="63dp"
             android:layout_marginTop="30dp"
-            android:text="@string/Merienda"
-            android:textSize="@dimen/mediumText"
-            android:background="@color/colorButton"
-            android:onClick="click"/>
+            android:background="@drawable/smooth_square"
+            android:drawablePadding="0dp"
+            android:drawableTop="@drawable/merienda"
+            android:onClick="click"
+            android:text="Merienda"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/combos"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="121dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
-            android:background="@color/colorButton"
-            android:textSize="@dimen/mediumText"
-            android:text="@string/Combos"
-            android:onClick="click"/>
+            android:background="@drawable/smooth_square"
+            android:drawableTop="@drawable/combos"
+            android:onClick="click"
+            android:text="Combos"
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/snacks"
-        android:layout_width="331dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorButton"
-        android:textSize="@dimen/mediumText"
-        android:text="@string/Snacks"
-        android:onClick="click"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:paddingHorizontal="@dimen/bigTextBoton"
+        android:drawableLeft="@drawable/croissant"
+        android:drawableRight="@drawable/yogurt"
+        android:background="@drawable/smooth_square"
+        android:onClick="click"
+        android:text="Snacks"
+        android:textSize="20sp"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
 
 
 </LinearLayout>

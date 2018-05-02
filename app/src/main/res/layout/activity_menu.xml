@@ -38,7 +38,7 @@
             android:drawablePadding="2dp"
             android:drawableTop="@drawable/sandwich"
             android:onClick="click"
-            android:text="Desayuno"
+            android:text="@string/Desayuno"
             android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -55,7 +55,7 @@
             android:drawablePadding="1dp"
             android:drawableTop="@drawable/pollo"
             android:onClick="click"
-            android:text="Almuerzo"
+            android:text="@string/Almuerzo"
             android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -80,7 +80,7 @@
             android:drawablePadding="0dp"
             android:drawableTop="@drawable/merienda"
             android:onClick="click"
-            android:text="Merienda"
+            android:text="@string/Merienda"
             android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -96,7 +96,7 @@
             android:background="@drawable/smooth_square"
             android:drawableTop="@drawable/combos"
             android:onClick="click"
-            android:text="Combos"
+            android:text="@string/Combos"
             android:textColor="#ffff"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -114,7 +114,7 @@
         android:drawableRight="@drawable/yogurt"
         android:background="@drawable/smooth_square"
         android:onClick="click"
-        android:text="Snacks"
+        android:text="@string/Snacks"
         android:textColor="#ffff"
         android:textSize="20sp"
         style="@style/Widget.AppCompat.Button.Borderless"/>

@@ -13,15 +13,18 @@ import android.view.View;
 public class MenuActivity extends AppCompatActivity {
 
     private Memoria memoria;
+
     private static int ALMUERZO = 1;
+    private static int DESAYUNO = 1;
+    private static int MERIENDA = 1;
+    private static int COMBOS = 1;
+    private static int SNACKS = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         memoria = new Memoria();
-        memoria.setItemDisponible(new Item(1,"Hamburguesa", 50, R.drawable.hamburguesa, 15));
-        memoria.setItemDisponible(new Item(2, "Soda", 100, R.drawable.soda, 5));
         memoria.setItemDisponible(new Item(1,"Hamburguesa", 50, R.drawable.hamburguesa, 15));
         memoria.setItemDisponible(new Item(2, "Soda", 100, R.drawable.soda, 5));
     }
@@ -48,22 +51,22 @@ public class MenuActivity extends AppCompatActivity {
             intent = new Intent(this, DisplayDesayunoActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
-            startActivityForResult(intent, ALMUERZO);
+            startActivityForResult(intent, DESAYUNO);
         } else if(view.getId() == R.id.merienda){
             intent = new Intent(this, DisplayMeriendaActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
-            startActivityForResult(intent, ALMUERZO);
+            startActivityForResult(intent, MERIENDA);
         } else if(view.getId() == R.id.combos){
             intent = new Intent(this, DisplayCombosActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
-            startActivityForResult(intent, ALMUERZO);
+            startActivityForResult(intent, COMBOS);
         } else if(view.getId() == R.id.snacks){
             intent = new Intent(this, DisplaySnacksActivity.class);
             intent.putExtra("memoria", memoria);
             // TODO alguito que agregar aqui...
-            startActivityForResult(intent, ALMUERZO);
+            startActivityForResult(intent, SNACKS);
         }
     }
 
@@ -71,6 +74,14 @@ public class MenuActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == ALMUERZO) {
+            memoria = (Memoria) data.getSerializableExtra("memoria");
+        } else if (requestCode == DESAYUNO) {
+            memoria = (Memoria) data.getSerializableExtra("memoria");
+        } else if (requestCode == MERIENDA) {
+            memoria = (Memoria) data.getSerializableExtra("memoria");
+        } else if (requestCode == COMBOS) {
+            memoria = (Memoria) data.getSerializableExtra("memoria");
+        } else if (requestCode == SNACKS) {
             memoria = (Memoria) data.getSerializableExtra("memoria");
         }
     }

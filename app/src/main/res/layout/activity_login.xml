@@ -9,6 +9,7 @@
     tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.LoginActivity">
 
     <TextView
+        android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"

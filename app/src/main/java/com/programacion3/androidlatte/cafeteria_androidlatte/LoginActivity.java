@@ -3,13 +3,20 @@ package com.programacion3.androidlatte.cafeteria_androidlatte;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private TextView texto1;
+    private TextView texto2;
+    private TextView texto3;
+    private Typeface Real;
 
     private String usuario1 = "UPB";
     private String usuario2 = "Case";
@@ -30,6 +37,16 @@ public class LoginActivity extends AppCompatActivity {
 
         usuario = (EditText) findViewById(R.id.usuario);
         contraseña = (EditText) findViewById(R.id.contraseña);
+
+        String fuente = "fuentes/RealitySunday.ttf";
+        this.Real = Typeface.createFromAsset(getAssets(), fuente);
+
+        texto1 = (TextView) findViewById(R.id.entrar);
+        texto2 = (TextView) findViewById(R.id.nuevo);
+        texto3 = (TextView) findViewById(R.id.appName);
+        texto1.setTypeface(Real);
+        texto2.setTypeface(Real);
+        texto3.setTypeface(Real);
 
     }
 

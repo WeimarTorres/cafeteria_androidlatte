@@ -2,6 +2,7 @@ package com.programacion3.androidlatte.cafeteria_androidlatte;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,11 @@ import android.widget.Toast;
 import java.util.List;
 
 public class SeleccionDeProductosActivity extends AppCompatActivity {
+
+    private TextView texto1;
+    private TextView texto2;
+    private TextView texto3;
+    private Typeface Real;
 
     private Memoria memoria;
     private Item itemSeleccionado;
@@ -37,6 +43,16 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
 
         imageView = findViewById(R.id.imagen);
         imageView.setImageResource(itemSeleccionado.getImg());
+
+        String fuente = "fuentes/RealitySunday.ttf";
+        this.Real = Typeface.createFromAsset(getAssets(), fuente);
+
+        texto1 = (TextView) findViewById(R.id.nombreSeleccion);
+        texto2 = (TextView) findViewById(R.id.precioSeleccion);
+        texto3 = (TextView) findViewById(R.id.enviar);
+        texto1.setTypeface(Real);
+        texto2.setTypeface(Real);
+        texto3.setTypeface(Real);
 
     }
 

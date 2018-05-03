@@ -40,7 +40,7 @@
             android:onClick="click"
             android:text="@string/Desayuno"
             android:textColor="#ffff"
-            android:textSize="18dp"
+            android:textSize="@dimen/mediumText"
 
             android:textStyle="bold" />
 
@@ -58,7 +58,7 @@
             android:onClick="click"
             android:text="@string/Almuerzo"
             android:textColor="#ffff"
-            android:textSize="18dp"
+            android:textSize="@dimen/mediumText"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -83,7 +83,7 @@
             android:onClick="click"
             android:text="@string/Merienda"
             android:textColor="#ffff"
-            android:textSize="18dp"
+            android:textSize="@dimen/mediumText"
             android:textStyle="bold" />
 
         <Button
@@ -99,7 +99,7 @@
             android:onClick="click"
             android:text="@string/Combos"
             android:textColor="#ffff"
-            android:textSize="19dp"
+            android:textSize="@dimen/mediumText"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -117,7 +117,7 @@
         android:onClick="click"
         android:text="@string/Snacks"
         android:textColor="#ffff"
-        android:textSize="20sp"
+        android:textSize="@dimen/mediumText"
         style="@style/Widget.AppCompat.Button.Borderless"/>
 
 

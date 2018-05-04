@@ -44,7 +44,7 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imagen);
         imageView.setImageResource(itemSeleccionado.getImg());
 
-        String fuente = "fuentes/RealitySunday.ttf";
+        String fuente = "fuentes/KG.ttf";
         this.Real = Typeface.createFromAsset(getAssets(), fuente);
 
         texto1 = (TextView) findViewById(R.id.nombreSeleccion);

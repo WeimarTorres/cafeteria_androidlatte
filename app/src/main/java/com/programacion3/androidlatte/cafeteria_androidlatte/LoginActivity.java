@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         usuario = (EditText) findViewById(R.id.usuario);
         contraseña = (EditText) findViewById(R.id.contraseña);
 
-        String fuente = "fuentes/RealitySunday.ttf";
+        String fuente = "fuentes/KG.ttf";
         this.Real = Typeface.createFromAsset(getAssets(), fuente);
 
         texto1 = (TextView) findViewById(R.id.entrar);

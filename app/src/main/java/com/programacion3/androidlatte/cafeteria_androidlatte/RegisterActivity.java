@@ -30,7 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
         contraseña = findViewById(R.id.contraseñaRegistro);
         botón = findViewById(R.id.botónRegistro);
 
-        String fuente = "fuentes/RealitySunday.ttf";
+        String fuente = "fuentes/KG.ttf";
         this.Real = Typeface.createFromAsset(getAssets(), fuente);
 
         texto1 = (TextView) findViewById(R.id.botónRegistro);

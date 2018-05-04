@@ -107,19 +107,19 @@
 
     <Button
         android:id="@+id/snacks"
-        android:layout_width="250dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="308dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:paddingHorizontal="@dimen/bigTextBoton"
+        android:background="@drawable/smooth_square"
         android:drawableLeft="@drawable/croissant"
         android:drawableRight="@drawable/yogurt"
-        android:background="@drawable/smooth_square"
         android:onClick="click"
+        android:paddingHorizontal="@dimen/bigTextBoton"
         android:text="@string/Snacks"
         android:textColor="#ffff"
-        android:textSize="@dimen/mediumText"
-        style="@style/Widget.AppCompat.Button.Borderless"/>
+        android:textSize="@dimen/mediumText" />
 
 
 </LinearLayout>

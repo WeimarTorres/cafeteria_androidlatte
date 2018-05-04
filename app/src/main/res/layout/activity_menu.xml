@@ -40,7 +40,7 @@
             android:drawableTop="@drawable/sandwich"
             android:onClick="click"
             android:text="@string/Desayuno"
-            android:textColor="#ffff"
+            android:textColor="@color/colorLetra"
             android:textSize="@dimen/mediumText"
 
             android:textStyle="bold" />

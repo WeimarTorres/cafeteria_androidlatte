@@ -3,9 +3,21 @@
     <color name="colorPrimary">#453319</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorButton">#77b97f</color>
-    <color name="colorAccent">#d9e259</color>
+    <color name="colorAccent">#f5f9ad</color>
     <color name="colorText">#4f9cdf</color>
     <color name="colorTextHint">#f2f0f0</color>
     <color name="colorCheckBox">#7e18c6bd</color>
     <color name="colorEscribir">#77b97f</color>
+    <color name="colorLetra">#f6f4f1</color>
+    <color name="redChalk">#ed7777</color>
+    <color name="orangeChalk">#fad48b</color>
+    <color name="yellowChalk">#f5f9ad</color>
+    <color name="greenChalk">#bcdf8a</color>
+    <color name="blueChalk">#94c0cc</color>
+    <color name="whiteChalk">#f6f4f1</color>
+    <color name="pinkChalk">#f2a3bd</color>
+    <color name="turquoiseChalk">#6fe7db</color>
+    <color name="yellow2Chalk">#d6d963</color>
+    <color name="purpleChalk">#c4adc9</color>
+    <color name="white2Chalk">#f4f4f0</color>
 </resources>

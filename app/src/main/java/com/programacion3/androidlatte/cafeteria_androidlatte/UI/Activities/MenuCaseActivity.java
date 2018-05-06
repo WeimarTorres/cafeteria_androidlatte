@@ -66,7 +66,7 @@ public class MenuCaseActivity extends AppCompatActivity {
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
         } else if (item.getItemId() == R.id.itemReservas) {
-            //TODO implementar BD
+            //TODO implementar DB
         }
     }
 

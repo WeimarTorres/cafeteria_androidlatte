@@ -9,53 +9,45 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.programacion3.androidlatte.cafeteria_androidlatte.Controller.Almacenamiento;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Controller.DBController;
 import com.programacion3.androidlatte.cafeteria_androidlatte.R;
-import com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.LoginActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private TextView texto1;
-    private TextView texto2;
-    private Typeface Real;
-
-    EditText usuario;
-    EditText codigo;
-    EditText password;
-    Button button;
-    Almacenamiento almacenamiento;
-
+    private EditText user;
+    private EditText code;
+    private EditText password;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        usuario = findViewById(R.id.usuarioRegistro);
-        codigo = findViewById(R.id.codigoRegistro);
+        TextView text1;
+        TextView text2;
+        Typeface real;
 
-        String fuente = "fuentes/KG.ttf";
-        this.Real = Typeface.createFromAsset(getAssets(), fuente);
+        String font = "font/KG.ttf";
+        real = Typeface.createFromAsset(getAssets(), font);
 
-        texto1 = (TextView) findViewById(R.id.buttonRegister);
-        texto2 = (TextView) findViewById(R.id.appName);
-        texto1.setTypeface(Real);
-        texto2.setTypeface(Real);
-        password = findViewById(R.id.passwordRegistro);
+        text1 = findViewById(R.id.buttonRegister);
+        text2 = findViewById(R.id.appName);
+        text1.setTypeface(real);
+        text2.setTypeface(real);
+
+        user = findViewById(R.id.userRegister);
+        code = findViewById(R.id.codeRegister);
+        password = findViewById(R.id.passwordRegister);
         button = findViewById(R.id.buttonRegister);
-
-        almacenamiento = new Almacenamiento(this, "Cuentas.db", null, 1 );
     }
 
     public void click(View view) {
-
-        almacenamiento.insertUsuario(usuario.getText().toString(), Integer.parseInt(codigo.getText().toString()), password.getText().toString());
-
         Intent intent;
         if (view.getId() == button.getId()) {
-            if (usuario.getText() != null && password.getText() != null) {
+            if (user.getText() != null && password.getText() != null) {
                 intent = new Intent(this, LoginActivity.class);
-                intent.putExtra("Usuario", String.valueOf(usuario.getText()));
+                intent.putExtra("Usuario", String.valueOf(user.getText()));
                 intent.putExtra("password", String.valueOf(password.getText()));
                 startActivity(intent);
             }

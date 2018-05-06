@@ -3,21 +3,26 @@
     <string name="app_name">Cafetería</string>
 
     <!--Login Activity-->
-    <string name="Recuerdame">Recuerdame?</string>
-
-    <!--Reservas Activity-->
-    <string name="Codigo">Codigo UPB</string>
+    <string name="UsuarioOCodigo">Usuario O Código UPB</string>
     <string name="Contraseña">Contraseña</string>
+    <string name="Recuerdame">Recuerdame?</string>
     <string name="Entrar">Entrar</string>
+    <string name="Nuevo">Nuevo?</string>
+
+    <!--Register Activity-->
+    <string name="Usuario">Usuario</string>
+    <string name="Codigo">Código UPB</string>
+    <string name="Registrarse">Registrarse</string>
+
+
+
     <string name="Menu">Menu</string>
     <string name="Desayuno">Desayuno</string>
     <string name="Almuerzo">Almuerzo</string>
     <string name="Merienda">Merienda</string>
     <string name="Combos">Combos</string>
     <string name="Snacks">Snacks</string>
-    <string name="Nuevo">Nuevo?...</string>
     <string name="Salir">Cerrar Sesion</string>
-    <string name="Usuario">Usuario</string>
     <string name="Reservas">Reservas</string>
     <string name="Editar">Editar</string>
     <string name="Información">Información</string>

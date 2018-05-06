@@ -15,14 +15,10 @@ import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextView texto1;
-    private TextView texto2;
-    private TextView texto3;
-    private Typeface Real;
-    private EditText usuario;
-    private EditText contraseña;
+    private EditText user;
+    private EditText password;
     private CheckBox checkBox;
-    SharedPreferences sharedPreferences;
+    private SharedPreferences sharedPreferences;
 
     static final String SHARED_PREFERENCES = "sharedPreferences";
     static final String KEY_REMEMBER = "rememberOneTimeLogin";
@@ -39,21 +35,26 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        String fuente = "fuentes/KG.ttf";
-        this.Real = Typeface.createFromAsset(getAssets(), fuente);
+        TextView text1;
+        TextView text2;
+        TextView text3;
+        Typeface real;
 
-        texto1 = findViewById(R.id.entrar);
-        texto2 = findViewById(R.id.nuevo);
-        texto3 = findViewById(R.id.appName);
-        texto1.setTypeface(Real);
-        texto2.setTypeface(Real);
-        texto3.setTypeface(Real);
+        String fuente = "font/KG.ttf";
+        real = Typeface.createFromAsset(getAssets(), fuente);
+
+        text1 = findViewById(R.id.enter);
+        text2 = findViewById(R.id.New);
+        text3 = findViewById(R.id.appName);
+        text1.setTypeface(real);
+        text2.setTypeface(real);
+        text3.setTypeface(real);
 
         usuario3 = getIntent().getStringExtra("Usuario");
         contraseña2 = getIntent().getStringExtra("Contraseña");
 
-        usuario = findViewById(R.id.usuario);
-        contraseña = findViewById(R.id.contraseña);
+        user = findViewById(R.id.userName);
+        password = findViewById(R.id.password);
         checkBox = findViewById(R.id.checkboxLogin);
         sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
 
@@ -61,13 +62,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public void click(View view) {
         Intent intent;
-        if (view.getId() == R.id.nuevo) {
+        if (view.getId() == R.id.New) {
             intent = new Intent(this, RegisterActivity.class);
             startActivity(intent);
-        } else if (view.getId() == R.id.entrar) {
-            if (!esAdministrativo() && verificarDatos(usuario, contraseña)) {
-                usuario.setText("");
-                contraseña.setText("");
+        } else if (view.getId() == R.id.enter) {
+            if (!esAdministrativo() && verificarDatos(user, password)) {
+                user.setText("");
+                password.setText("");
                 if (checkBox.isChecked()) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean(KEY_REMEMBER, true);
@@ -77,9 +78,9 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 intent = new Intent(this, MenuActivity.class);
                 startActivity(intent);
-            } else if (esAdministrativo() && verificarDatos(usuario, contraseña)) {
-                usuario.setText("");
-                contraseña.setText("");
+            } else if (esAdministrativo() && verificarDatos(user, password)) {
+                user.setText("");
+                password.setText("");
                 if (checkBox.isChecked()) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putBoolean(KEY_REMEMBER, true);
@@ -90,8 +91,8 @@ public class LoginActivity extends AppCompatActivity {
                 intent = new Intent(this, MenuCaseActivity.class);
                 startActivity(intent);
             } else {
-                usuario.setText("");
-                contraseña.setText("");
+                user.setText("");
+                password.setText("");
                 Toast.makeText(this, "¡Datos Erroneos!", Toast.LENGTH_SHORT).show();
             }
         }
@@ -99,31 +100,18 @@ public class LoginActivity extends AppCompatActivity {
 
     public boolean verificarDatos(EditText usuario, EditText contraseña) {
         if (usuario3 != null && contraseña2 != null) {
-            if ((usuario1.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText()))) ||
+            return (usuario1.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText()))) ||
                     (usuario2.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText()))) ||
-                    (usuario3.equals(String.valueOf(usuario.getText())) && contraseña2.equals(String.valueOf(contraseña.getText())))) {
-                return true;
+                    (usuario3.equals(String.valueOf(usuario.getText())) && contraseña2.equals(String.valueOf(contraseña.getText())));
                 //TODO verificar con codigo upb
-            } else {
-                return false;
-            }
         } else {
-            if ((usuario1.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText()))) ||
-                    (usuario2.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText())))) {
-                return true;
-                //TODO verificar con codigo upb
-            } else {
-                return false;
-            }
+            return (usuario1.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText()))) ||
+                    (usuario2.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText())));
         }
     }
 
     public boolean esAdministrativo() {
-        if (usuario2.equals(String.valueOf(usuario.getText()))) {
-            return true;
-        } else {
-            return false;
-        }
+        return usuario2.equals(String.valueOf(user.getText()));
     }
 
 }

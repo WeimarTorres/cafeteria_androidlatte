@@ -19,12 +19,12 @@
         android:textSize="@dimen/titleText" />
 
     <EditText
-        android:id="@+id/usuario"
+        android:id="@+id/userName"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="30dp"
-        android:hint="@string/Usuario"
+        android:hint="@string/UsuarioOCodigo"
         android:singleLine="true"
         android:textStyle="italic"
         android:textColor="@color/whiteChalk"
@@ -32,7 +32,7 @@
         android:textSize="@dimen/mediumText" />
 
     <EditText
-        android:id="@+id/contraseña"
+        android:id="@+id/password"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:hint="@string/Contraseña"
@@ -56,7 +56,7 @@
         android:text="@string/Recuerdame" />
 
     <Button
-        android:id="@+id/entrar"
+        android:id="@+id/enter"
         android:onClick="click"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         android:textSize="@dimen/mediumText" />
 
     <TextView
-        android:id="@+id/nuevo"
+        android:id="@+id/New"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="click"

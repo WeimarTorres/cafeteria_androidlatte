@@ -7,11 +7,12 @@
     tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.FirstActivity">
 
     <TextView
+        android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textSize="@dimen/titleText"
-        android:textColor="@color/colorText"
+        android:textColor="@color/redChalk"
         android:layout_gravity="center" />
 
 </FrameLayout>

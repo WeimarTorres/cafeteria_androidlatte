@@ -2,9 +2,12 @@ package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Bundle;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
 
 import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
@@ -20,6 +23,15 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+
+        TextView text1;
+        Typeface real;
+
+        String font = "font/KG.ttf";
+        real = Typeface.createFromAsset(getAssets(), font);
+
+        text1 = findViewById(R.id.appName);
+        text1.setTypeface(real);
 
         sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
 

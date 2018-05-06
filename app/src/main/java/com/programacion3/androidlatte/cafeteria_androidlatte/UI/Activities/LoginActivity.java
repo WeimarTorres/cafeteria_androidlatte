@@ -42,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         TextView text1;
         TextView text2;
         TextView text3;
+        TextView text4;
         Typeface real;
 
         String font = "font/KG.ttf";
@@ -50,9 +51,11 @@ public class LoginActivity extends AppCompatActivity {
         text1 = findViewById(R.id.enter);
         text2 = findViewById(R.id.New);
         text3 = findViewById(R.id.appName);
+        text4 = findViewById(R.id.checkboxLogin);
         text1.setTypeface(real);
         text2.setTypeface(real);
         text3.setTypeface(real);
+        text4.setTypeface(real);
 
         usuario3 = getIntent().getStringExtra("Usuario");
         contraseña2 = getIntent().getStringExtra("Contraseña");

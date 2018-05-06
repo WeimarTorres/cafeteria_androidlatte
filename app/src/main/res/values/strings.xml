@@ -29,4 +29,7 @@
     <string name="Apellido">Apellido</string>
     <string name="Código">Código</string>
     <string name="title_activity_reservas_case">ReservasCaseActivity</string>
+    <string name="title_activity_layout_fake">layoutFakeActivity</string>
+    <string name="title_activity_register_fake">RegisterFakeActivity</string>
+    <string name="title_activity_login_fake">LoginFakeActivity</string>
 </resources>

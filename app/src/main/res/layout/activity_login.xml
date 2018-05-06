@@ -63,7 +63,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
         android:layout_gravity="start"
-        android:textColor="@color/colorText"
+        android:textColor="@color/turquoiseChalk"
         android:text="@string/Recuerdame" />
 
     <Button

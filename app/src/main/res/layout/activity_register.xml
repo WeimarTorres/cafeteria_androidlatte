@@ -15,7 +15,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="40dp"
         android:text="@string/app_name"
-        android:textColor="@color/colorText"
+        android:textColor="@color/orangeChalk"
         android:textSize="@dimen/titleText" />
 
     <EditText
@@ -27,7 +27,7 @@
         android:layout_marginLeft="30dp"
         android:hint="@string/Usuario"
         android:singleLine="true"
-        android:textColor="@color/colorEscribir"
+        android:textColor="@color/whiteChalk"
         android:textColorHint="@color/colorTextHint"
         android:textSize="@dimen/mediumText"
         android:textStyle="italic" />
@@ -43,7 +43,7 @@
         android:inputType="number"
         android:maxLength="5"
         android:singleLine="true"
-        android:textColor="@color/colorEscribir"
+        android:textColor="@color/whiteChalk"
         android:textColorHint="@color/colorTextHint"
         android:textSize="@dimen/mediumText"
         android:textStyle="italic" />
@@ -58,7 +58,7 @@
         android:hint="@string/Contraseña"
         android:inputType="textPassword"
         android:singleLine="true"
-        android:textColor="@color/colorEscribir"
+        android:textColor="@color/whiteChalk"
         android:textColorHint="@color/colorTextHint"
         android:textSize="@dimen/mediumText"
         android:textStyle="italic" />
@@ -68,7 +68,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:background="@color/colorButton"
+        android:background="@color/yellowChalk"
         android:onClick="click"
         android:padding="10dp"
         android:text="@string/Registrarse"

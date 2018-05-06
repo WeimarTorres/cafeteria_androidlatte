@@ -51,6 +51,7 @@ public class MenuActivity extends AppCompatActivity {
         texto4 = (TextView) findViewById(R.id.combos);
         texto5 = (TextView) findViewById(R.id.almuerzo);
         texto6 = (TextView) findViewById(R.id.snacks);
+
         texto1.setTypeface(Real);
         texto2.setTypeface(Real);
         texto3.setTypeface(Real);

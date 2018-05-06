@@ -40,6 +40,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:hint="@string/Codigo"
+        android:inputType="number"
+        android:maxLength="5"
         android:singleLine="true"
         android:textColor="@color/colorEscribir"
         android:textColorHint="@color/colorTextHint"

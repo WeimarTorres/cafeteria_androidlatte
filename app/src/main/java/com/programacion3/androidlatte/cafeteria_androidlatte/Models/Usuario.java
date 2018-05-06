@@ -10,34 +10,35 @@ public class Usuario implements Serializable {
     private int codigo;
     //@Expose
     private String password;
+    //@Expose
+    private boolean isAdministrator;
 
-    public Usuario (String username, int codigo, String password) {
+    public Usuario(String username, int codigo, String password, int isAdministrator) {
         this.username = username;
         this.codigo = codigo;
         this.password = password;
+        if (isAdministrator == 1) {
+            this.isAdministrator = true;
+        } else {
+
+            this.isAdministrator = false;
+        }
+    }
+
+    public boolean isAdministrator() {
+        return isAdministrator;
     }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public int getCodigo() {
         return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

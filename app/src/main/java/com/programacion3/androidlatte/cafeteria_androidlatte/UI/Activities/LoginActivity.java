@@ -11,14 +11,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.programacion3.androidlatte.cafeteria_androidlatte.Controller.DBController;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Usuario;
 import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
 public class LoginActivity extends AppCompatActivity {
 
     private EditText user;
     private EditText password;
+    private EditText code;
     private CheckBox checkBox;
     private SharedPreferences sharedPreferences;
+    private DBController dbController;
 
     static final String SHARED_PREFERENCES = "sharedPreferences";
     static final String KEY_REMEMBER = "rememberOneTimeLogin";
@@ -40,8 +44,8 @@ public class LoginActivity extends AppCompatActivity {
         TextView text3;
         Typeface real;
 
-        String fuente = "font/KG.ttf";
-        real = Typeface.createFromAsset(getAssets(), fuente);
+        String font = "font/KG.ttf";
+        real = Typeface.createFromAsset(getAssets(), font);
 
         text1 = findViewById(R.id.enter);
         text2 = findViewById(R.id.New);
@@ -55,8 +59,10 @@ public class LoginActivity extends AppCompatActivity {
 
         user = findViewById(R.id.userName);
         password = findViewById(R.id.password);
+        code = findViewById(R.id.codeLogin);
         checkBox = findViewById(R.id.checkboxLogin);
         sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);
+        dbController = new DBController(this, "DBCafeteria.db", null, 1);
 
     }
 
@@ -66,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
             intent = new Intent(this, RegisterActivity.class);
             startActivity(intent);
         } else if (view.getId() == R.id.enter) {
-            if (!esAdministrativo() && verificarDatos(user, password)) {
+            if (!esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user, password)) {
                 user.setText("");
                 password.setText("");
                 if (checkBox.isChecked()) {
@@ -78,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 intent = new Intent(this, MenuActivity.class);
                 startActivity(intent);
-            } else if (esAdministrativo() && verificarDatos(user, password)) {
+            } else if (esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user, password)) {
                 user.setText("");
                 password.setText("");
                 if (checkBox.isChecked()) {
@@ -110,8 +116,8 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public boolean esAdministrativo() {
-        return usuario2.equals(String.valueOf(user.getText()));
+    public boolean esAdministrativo(int codeUPB) {
+        Usuario user = dbController.selectUser(codeUPB);
+        return user.isAdministrator();
     }
-
 }

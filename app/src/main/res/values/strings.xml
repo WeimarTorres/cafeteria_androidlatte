@@ -3,15 +3,14 @@
     <string name="app_name">Cafetería</string>
 
     <!--Login Activity-->
-    <string name="UsuarioOCodigo">Usuario O Código UPB</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Codigo">Código UPB</string>
     <string name="Contraseña">Contraseña</string>
     <string name="Recuerdame">Recuerdame?</string>
     <string name="Entrar">Entrar</string>
     <string name="Nuevo">Nuevo?</string>
 
     <!--Register Activity-->
-    <string name="Usuario">Usuario</string>
-    <string name="Codigo">Código UPB</string>
     <string name="Registrarse">Registrarse</string>
 
 

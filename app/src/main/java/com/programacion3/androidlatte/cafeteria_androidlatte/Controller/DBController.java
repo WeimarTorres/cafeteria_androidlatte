@@ -2,9 +2,15 @@ package com.programacion3.androidlatte.cafeteria_androidlatte.Controller;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Usuario;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class DBController extends SQLiteOpenHelper {
 
@@ -14,7 +20,7 @@ public class DBController extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE 'USUARIOS' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Usuario' TEXT, 'CodigoUPB' INTEGER UNIQUE, 'Password' TEXT, 'isAdmin' INTEGER)");
+        sqLiteDatabase.execSQL("CREATE TABLE 'USUARIOS' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Usuario' TEXT, 'CodigoUPB' INTEGER UNIQUE, 'Contraseña' TEXT, 'esAdministrador' INTEGER)");
         //Codigo UPB? Para relacionar tablas
         sqLiteDatabase.execSQL("CREATE TABLE 'INVENTARIO' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Codigo' INTEGER UNIQUE, 'Nombre' TEXT, 'Cantidad' INTEGER, 'Precio' INTEGER)");
         //TODO Horario con datetime()
@@ -28,7 +34,7 @@ public class DBController extends SQLiteOpenHelper {
         insertAdmin("Adela7", 7, "1234");
         insertAdmin("Adela8", 8, "1234");
         insertAdmin("Adela9", 9, "1234");
-        insertAdmin("Adela10", 10, "1234");
+        insertAdmin("Adela10", 10, "12345");
     }
 
     @Override
@@ -39,46 +45,48 @@ public class DBController extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public boolean insertAdmin(String nombre, int codigo, String password) {
+    private void insertAdmin(String user, int code, String password) {
         try {
             ContentValues contentValues = new ContentValues();
 
-            contentValues.put("Usuario", nombre);
-            contentValues.put("CodigoUPB", codigo);
-            contentValues.put("Password", password);
-            contentValues.put("isAdmin", 1);
+            contentValues.put("Usuario", user);
+            contentValues.put("CodigoUPB", code);
+            contentValues.put("Contraseña", password);
+            contentValues.put("esAdministrador", 1);
 
             getWritableDatabase().insertOrThrow("USUARIO", null, contentValues);
         } catch (SQLException e) {
-            return false;
         }
-        return true;
     }
 
-    public boolean insertUsuario(String nombre, int codigo, String password) {
+    public void insertUsuario(String user, int code, String password) {
         try {
             ContentValues contentValues = new ContentValues();
 
-            contentValues.put("Usuario", nombre);
-            contentValues.put("CodigoUPB", codigo);
-            contentValues.put("Password", password);
-            contentValues.put("isAdmin", 0);
+            contentValues.put("Usuario", user);
+            contentValues.put("CodigoUPB", code);
+            contentValues.put("Contraseña", password);
+            contentValues.put("esAdministrador", 0);
 
             getWritableDatabase().insertOrThrow("USUARIO", null, contentValues);
         } catch (SQLException e) {
-            return false;
         }
-        return true;
     }
 
-//    public List<Usuario> selectAllUsuarios() {
-//        List<Usuario> usuariosList = new LinkedList<>();
-//        Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM USUARIOS", null);
-//        while (cursor.moveToNext()) {
-//            usuariosList.add(new Usuario(cursor.getString(1), cursor.getInt(2), cursor.getString(3)));
-//        }
-//        return usuariosList;
-//    }
+    public List<Usuario> selectAllUsers() {
+        List<Usuario> usersList = new LinkedList<>();
+        Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM USUARIOS", null);
+        while (cursor.moveToNext()) {
+            usersList.add(new Usuario(cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getInt(4)));
+        }
+        return usersList;
+    }
+
+    public Usuario selectUser(int codeUPB) {
+        Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM USUARIOS WHERE CodigoUPB = " + codeUPB, null);
+        Usuario user = new Usuario(cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getInt(4));
+        return user;
+    }
 
     public boolean updateUsuario(String nombre, int codigoUpb, String password) {
         try {

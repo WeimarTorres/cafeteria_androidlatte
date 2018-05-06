@@ -17,7 +17,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
             android:textSize="@dimen/titleText"
-            android:textColor="@color/colorTextHint"
+            android:textColor="@color/orangeChalk"
             android:text="@string/Merienda"/>
 
         <ListView

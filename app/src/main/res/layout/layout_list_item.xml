@@ -25,8 +25,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorText"
             android:layout_gravity="top|center_horizontal"
-            android:textSize="@dimen/bigText"
-            android:textStyle="bold" />
+            android:textSize="@dimen/bigText" />
 
         <ProgressBar
             android:id="@+id/cantidad"
@@ -45,7 +44,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:textSize="@dimen/bigText"
-        android:textStyle="bold" />
+        android:textSize="@dimen/bigText"/>
 
 </RelativeLayout>

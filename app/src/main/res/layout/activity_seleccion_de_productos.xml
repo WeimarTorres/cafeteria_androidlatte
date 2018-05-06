@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:textColor="#0f74c6"
+            android:textColor="@color/redChalk"
             android:textSize="@dimen/titleText" />
 
         <ImageView
@@ -33,84 +33,84 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Precio:"
-            android:textColor="#a4e91c"
+            android:textColor="@color/purpleChalk"
             android:textSize="@dimen/mediumText" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Descripción:"
-            android:textColor="#47cc1f"
+            android:textColor="@color/yellow2Chalk"
             android:textSize="@dimen/mediumText" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ingredientes a escoger:"
-            android:textColor="#47cc1f"
+            android:textColor="@color/blueChalk"
             android:textSize="@dimen/mediumText" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tomate"
-            android:textColor="@color/colorCheckBox"
+            android:textColor="@color/turquoiseChalk"
             android:textSize="@dimen/mediumText" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lechuga"
-            android:textColor="@color/colorCheckBox"
+            android:textColor="@color/turquoiseChalk"
             android:textSize="@dimen/mediumText" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cebolla"
-            android:textColor="@color/colorCheckBox"
+            android:textColor="@color/turquoiseChalk"
             android:textSize="@dimen/mediumText" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Queso"
-            android:textColor="@color/colorCheckBox"
+            android:textColor="@color/turquoiseChalk"
             android:textSize="@dimen/mediumText" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Salsa"
-            android:textColor="@color/colorCheckBox"
+            android:textColor="@color/turquoiseChalk"
             android:textSize="@dimen/mediumText" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Papas"
-            android:textColor="@color/colorCheckBox"
+            android:textColor="@color/turquoiseChalk"
             android:textSize="@dimen/mediumText" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pepinillo"
-            android:textColor="@color/colorCheckBox"
+            android:textColor="@color/turquoiseChalk"
             android:textSize="@dimen/mediumText" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Aros de cebolla"
-            android:textColor="@color/colorCheckBox"
+            android:textColor="@color/turquoiseChalk"
             android:textSize="@dimen/mediumText" />
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Repollo"
-            android:textColor="@color/colorCheckBox"
+            android:textColor="@color/turquoiseChalk"
             android:textSize="@dimen/mediumText" />
 
         <Button
@@ -119,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/bigText"
-            android:background="@color/colorButton"
+            android:background="@color/yellowChalk"
             android:text="ENVIAR"
             android:onClick="click"
             android:textSize="@dimen/bigTextBoton" />

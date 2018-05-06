@@ -16,7 +16,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
             android:textSize="@dimen/titleText"
-            android:textColor="@color/colorTextHint"
+            android:textColor="@color/blueChalk"
             android:text="@string/Combos"/>
 
         <ListView

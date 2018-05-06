@@ -17,7 +17,7 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:text="@string/Menu"
-        android:textColor="@color/colorText"
+        android:textColor="@color/pinkChalk"
         android:textSize="@dimen/titleText"/>
 
 
@@ -40,7 +40,7 @@
             android:drawableTop="@drawable/sandwich"
             android:onClick="click"
             android:text="@string/Desayuno"
-            android:textColor="@color/colorLetra"
+            android:textColor="@color/whiteChalk"
             android:textSize="@dimen/mediumText"
 
             android:textStyle="bold" />
@@ -58,7 +58,7 @@
             android:drawableTop="@drawable/pollo"
             android:onClick="click"
             android:text="@string/Almuerzo"
-            android:textColor="#ffff"
+            android:textColor="@color/whiteChalk"
             android:textSize="@dimen/mediumText"
             android:textStyle="bold" />
 
@@ -83,7 +83,7 @@
             android:drawableTop="@drawable/merienda"
             android:onClick="click"
             android:text="@string/Merienda"
-            android:textColor="#ffff"
+            android:textColor="@color/whiteChalk"
             android:textSize="@dimen/mediumText"
             android:textStyle="bold" />
 
@@ -99,7 +99,7 @@
             android:drawableTop="@drawable/combos"
             android:onClick="click"
             android:text="@string/Combos"
-            android:textColor="#ffff"
+            android:textColor="@color/whiteChalk"
             android:textSize="@dimen/mediumText"
             android:textStyle="bold" />
 
@@ -118,7 +118,7 @@
         android:onClick="click"
         android:paddingHorizontal="@dimen/bigTextBoton"
         android:text="@string/Snacks"
-        android:textColor="#ffff"
+        android:textColor="@color/whiteChalk"
         android:textSize="@dimen/mediumText" />
 
 

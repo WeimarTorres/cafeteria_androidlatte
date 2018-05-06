@@ -1,4 +1,4 @@
-package com.programacion3.androidlatte.cafeteria_androidlatte;
+package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.programacion3.androidlatte.cafeteria_androidlatte.Controller.Almacenamiento;
+import com.programacion3.androidlatte.cafeteria_androidlatte.R;
+import com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.LoginActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -35,12 +37,12 @@ public class RegisterActivity extends AppCompatActivity {
         String fuente = "fuentes/KG.ttf";
         this.Real = Typeface.createFromAsset(getAssets(), fuente);
 
-        texto1 = (TextView) findViewById(R.id.botónRegistro);
+        texto1 = (TextView) findViewById(R.id.buttonRegister);
         texto2 = (TextView) findViewById(R.id.appName);
         texto1.setTypeface(Real);
         texto2.setTypeface(Real);
         password = findViewById(R.id.passwordRegistro);
-        button = findViewById(R.id.buttonRegistro);
+        button = findViewById(R.id.buttonRegister);
 
         almacenamiento = new Almacenamiento(this, "Cuentas.db", null, 1 );
     }

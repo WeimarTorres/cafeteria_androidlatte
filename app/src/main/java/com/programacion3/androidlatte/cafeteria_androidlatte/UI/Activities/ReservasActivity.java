@@ -1,13 +1,16 @@
-package com.programacion3.androidlatte.cafeteria_androidlatte;
+package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import java.util.LinkedList;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Item;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Memoria;
+import com.programacion3.androidlatte.cafeteria_androidlatte.R;
+import com.programacion3.androidlatte.cafeteria_androidlatte.UI.Adapters.ItemAdapter;
+
 import java.util.List;
 
 public class ReservasActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.programacion3.androidlatte.cafeteria_androidlatte;
+package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,7 +9,8 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.programacion3.androidlatte.cafeteria_androidlatte.Item;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Item;
+import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -20,7 +21,7 @@ public class ItemAdapter extends BaseAdapter{
     List<Item> itemList = new LinkedList<>();
     LayoutInflater inflater;
 
-    ItemAdapter(Context context, List<Item> itemList){
+    public ItemAdapter(Context context, List<Item> itemList){
         this.context = context;
         this.itemList = itemList;
         inflater = LayoutInflater.from(context);

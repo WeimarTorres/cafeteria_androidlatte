@@ -6,7 +6,7 @@
     android:background="@drawable/fondo_pizarra"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.LoginActivity">
+    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.LoginActivity">
 
 
     <TextView

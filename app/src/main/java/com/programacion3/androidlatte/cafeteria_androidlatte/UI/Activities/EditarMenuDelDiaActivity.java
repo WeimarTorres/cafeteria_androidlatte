@@ -1,7 +1,9 @@
-package com.programacion3.androidlatte.cafeteria_androidlatte;
+package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
 public class EditarMenuDelDiaActivity extends AppCompatActivity {
 

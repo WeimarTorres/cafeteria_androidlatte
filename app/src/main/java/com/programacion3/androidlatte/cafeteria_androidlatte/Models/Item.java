@@ -1,4 +1,4 @@
-package com.programacion3.androidlatte.cafeteria_androidlatte;
+package com.programacion3.androidlatte.cafeteria_androidlatte.Models;
 
 import java.io.Serializable;
 

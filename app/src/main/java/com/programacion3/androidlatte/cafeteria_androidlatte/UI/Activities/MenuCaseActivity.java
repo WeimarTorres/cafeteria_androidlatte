@@ -1,4 +1,4 @@
-package com.programacion3.androidlatte.cafeteria_androidlatte;
+package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
 public class MenuCaseActivity extends AppCompatActivity {
 

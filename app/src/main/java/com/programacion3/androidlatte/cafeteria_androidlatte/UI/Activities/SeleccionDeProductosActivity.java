@@ -1,4 +1,4 @@
-package com.programacion3.androidlatte.cafeteria_androidlatte;
+package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,9 +9,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.List;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Item;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Memoria;
+import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
 public class SeleccionDeProductosActivity extends AppCompatActivity {
 

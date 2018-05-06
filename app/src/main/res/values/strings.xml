@@ -1,5 +1,11 @@
 <resources>
+    <!--General Strings-->
     <string name="app_name">Cafetería</string>
+
+    <!--Login Activity-->
+    <string name="Recuerdame">Recuerdame?</string>
+
+    <!--Reservas Activity-->
     <string name="Codigo">Codigo UPB</string>
     <string name="Contraseña">Contraseña</string>
     <string name="Entrar">Entrar</string>

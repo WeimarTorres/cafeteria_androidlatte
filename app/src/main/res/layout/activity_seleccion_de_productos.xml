@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_pizarra"
-    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.SeleccionDeProductosActivity">
+    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.SeleccionDeProductosActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

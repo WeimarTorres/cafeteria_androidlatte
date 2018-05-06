@@ -9,26 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".UI.Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".MenuCaseActivity" />
-        <activity android:name=".SeleccionDeProductosActivity" />
-        <activity android:name=".DisplayAlmuerzoActivity" />
-        <activity android:name=".ReservasActivity" />
-        <activity android:name=".ReservasCaseActivity" />
-        <activity android:name=".EdicionDeProductosActivity" />
-        <activity android:name=".EditarMenuDelDiaActivity" />
-        <activity android:name=".DisplayDesayunoActivity" />
-        <activity android:name=".DisplayMeriendaActivity" />
-        <activity android:name=".DisplayCombosActivity" />
-        <activity android:name=".DisplaySnacksActivity"></activity>
+        <activity android:name=".UI.Activities.RegisterActivity" />
+        <activity android:name=".UI.Activities.MenuActivity" />
+        <activity android:name=".UI.Activities.MenuCaseActivity" />
+        <activity android:name=".UI.Activities.SeleccionDeProductosActivity" />
+        <activity android:name=".UI.Activities.DisplayAlmuerzoActivity" />
+        <activity android:name=".UI.Activities.ReservasActivity" />
+        <activity android:name=".UI.Activities.ReservasCaseActivity" />
+        <activity android:name=".UI.Activities.EdicionDeProductosActivity" />
+        <activity android:name=".UI.Activities.EditarMenuDelDiaActivity" />
+        <activity android:name=".UI.Activities.DisplayDesayunoActivity" />
+        <activity android:name=".UI.Activities.DisplayMeriendaActivity" />
+        <activity android:name=".UI.Activities.DisplayCombosActivity" />
+        <activity android:name=".UI.Activities.DisplaySnacksActivity"></activity>
     </application>
 
 </manifest>

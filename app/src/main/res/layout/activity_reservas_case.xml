@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/fondo_pizarra"
-    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.ReservasCaseActivity">
+    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.ReservasCaseActivity">
 
     <TextView
         android:layout_width="wrap_content"

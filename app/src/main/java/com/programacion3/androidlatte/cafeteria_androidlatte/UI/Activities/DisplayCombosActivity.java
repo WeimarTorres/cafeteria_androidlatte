@@ -1,4 +1,4 @@
-package com.programacion3.androidlatte.cafeteria_androidlatte;
+package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,9 +7,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Item;
+import com.programacion3.androidlatte.cafeteria_androidlatte.UI.Adapters.ItemAdapter;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Memoria;
+import com.programacion3.androidlatte.cafeteria_androidlatte.R;
+
 import java.util.List;
 
-public class DisplayAlmuerzoActivity extends AppCompatActivity {
+public class DisplayCombosActivity extends AppCompatActivity {
 
     private ListView listView;
     private Memoria memoria;
@@ -19,9 +24,9 @@ public class DisplayAlmuerzoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_almuerzo);
+        setContentView(R.layout.activity_display_combos);
 
-        listView = findViewById(R.id.lista1);
+        listView = findViewById(R.id.lista2);
 
         Intent intent = getIntent();
         memoria = (Memoria)intent.getSerializableExtra("memoria");
@@ -33,7 +38,7 @@ public class DisplayAlmuerzoActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(DisplayAlmuerzoActivity.this, SeleccionDeProductosActivity.class);
+                Intent intent = new Intent(DisplayCombosActivity.this, SeleccionDeProductosActivity.class);
                 intent.putExtra("memoria", memoria);
                 Item item = (Item) adapterView.getItemAtPosition(i);
                 intent.putExtra("itemSeleccionado", item);

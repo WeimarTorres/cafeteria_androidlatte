@@ -6,7 +6,7 @@
     android:background="@drawable/fondo_pizarra"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.LoginActivity">
+    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.LoginActivity">
 
     <TextView
         android:id="@+id/appName"
@@ -43,6 +43,17 @@
         android:textColorHint="@color/whiteChalk"
         android:textSize="@dimen/mediumText"
         android:textStyle="italic" />
+
+    <CheckBox
+        android:id="@+id/checkboxLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_gravity="start"
+        android:textColor="@color/colorText"
+        android:text="@string/Recuerdame" />
 
     <Button
         android:id="@+id/entrar"

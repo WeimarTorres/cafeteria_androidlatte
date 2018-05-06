@@ -6,7 +6,7 @@
     android:background="@drawable/fondo_pizarra"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.MenuCaseActivity">
+    tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.MenuCaseActivity">
 
     <TextView
         android:layout_width="wrap_content"

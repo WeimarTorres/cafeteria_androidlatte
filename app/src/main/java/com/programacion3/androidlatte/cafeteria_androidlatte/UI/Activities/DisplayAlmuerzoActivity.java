@@ -1,4 +1,4 @@
-package com.programacion3.androidlatte.cafeteria_androidlatte;
+package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,9 +7,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Item;
+import com.programacion3.androidlatte.cafeteria_androidlatte.UI.Adapters.ItemAdapter;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Memoria;
+import com.programacion3.androidlatte.cafeteria_androidlatte.R;
+
 import java.util.List;
 
-public class DisplaySnacksActivity extends AppCompatActivity {
+public class DisplayAlmuerzoActivity extends AppCompatActivity {
+
     private ListView listView;
     private Memoria memoria;
     private List<Item> itemList;
@@ -18,7 +24,7 @@ public class DisplaySnacksActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_snacks);
+        setContentView(R.layout.activity_display_almuerzo);
 
         listView = findViewById(R.id.lista1);
 
@@ -32,7 +38,7 @@ public class DisplaySnacksActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(DisplaySnacksActivity.this, SeleccionDeProductosActivity.class);
+                Intent intent = new Intent(DisplayAlmuerzoActivity.this, SeleccionDeProductosActivity.class);
                 intent.putExtra("memoria", memoria);
                 Item item = (Item) adapterView.getItemAtPosition(i);
                 intent.putExtra("itemSeleccionado", item);

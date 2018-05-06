@@ -126,6 +126,8 @@ public class MenuActivity extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
+                    Intent intent = new Intent(MenuActivity.this, LoginActivity.class);
+                    startActivity(intent);
                     finish();
                 }
             });

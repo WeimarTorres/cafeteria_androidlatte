@@ -2,6 +2,7 @@ package com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -9,16 +10,33 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
 public class MenuCaseActivity extends AppCompatActivity {
+
+    private TextView texto1;
+    private TextView texto2;
+    private TextView texto3;
+    private Typeface Real;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_case);
+
+        String fuente = "font/KG.ttf";
+        this.Real = Typeface.createFromAsset(getAssets(), fuente);
+
+        texto1 = (TextView) findViewById(R.id.appName);
+        texto2 = (TextView) findViewById(R.id.editar);
+        texto3 = (TextView) findViewById(R.id.reservas);
+
+        texto1.setTypeface(Real);
+        texto2.setTypeface(Real);
+        texto3.setTypeface(Real);
     }
 
     @Override

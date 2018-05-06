@@ -19,6 +19,8 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
     private TextView texto1;
     private TextView texto2;
     private TextView texto3;
+    private TextView texto4;
+    private TextView texto5;
     private Typeface Real;
 
     private Memoria memoria;
@@ -51,9 +53,13 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
         texto1 = (TextView) findViewById(R.id.nombreSeleccion);
         texto2 = (TextView) findViewById(R.id.precioSeleccion);
         texto3 = (TextView) findViewById(R.id.enviar);
+        texto4 = (TextView) findViewById(R.id.descripcion);
+        texto5 = (TextView) findViewById(R.id.ingredientes);
         texto1.setTypeface(Real);
         texto2.setTypeface(Real);
         texto3.setTypeface(Real);
+        texto4.setTypeface(Real);
+        texto5.setTypeface(Real);
 
     }
 

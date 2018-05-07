@@ -7,6 +7,5 @@
     android:background="@drawable/fondo_pizarra"
     tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.ReservasCaseActivity">
 
-    
 
 </LinearLayout>

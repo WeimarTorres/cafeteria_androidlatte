@@ -27,8 +27,8 @@ public class MenuCaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_case);
 
-        String fuente = "font/KG.ttf";
-        this.Real = Typeface.createFromAsset(getAssets(), fuente);
+        String font = "font/KG.ttf";
+        this.Real = Typeface.createFromAsset(getAssets(), font);
 
         texto1 = (TextView) findViewById(R.id.appName);
         texto2 = (TextView) findViewById(R.id.editar);

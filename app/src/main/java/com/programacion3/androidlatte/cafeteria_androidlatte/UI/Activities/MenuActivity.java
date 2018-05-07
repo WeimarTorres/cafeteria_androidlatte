@@ -42,8 +42,8 @@ public class MenuActivity extends AppCompatActivity {
         memoria.setItemDisponible(new Item(1,"Hamburguesa", 50, R.drawable.hamburguesa, 15));
         memoria.setItemDisponible(new Item(2, "Soda", 100, R.drawable.soda, 5));
 
-        String fuente = "font/KG.ttf";
-        this.Real = Typeface.createFromAsset(getAssets(), fuente);
+        String font = "font/KG.ttf";
+        this.Real = Typeface.createFromAsset(getAssets(), font);
 
         texto1 = (TextView) findViewById(R.id.menu);
         texto2 = (TextView) findViewById(R.id.desayuno);

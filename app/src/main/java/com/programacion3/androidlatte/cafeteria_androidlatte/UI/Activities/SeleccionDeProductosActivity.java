@@ -47,8 +47,8 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imagen);
         imageView.setImageResource(itemSeleccionado.getImg());
 
-        String fuente = "font/KG.ttf";
-        this.Real = Typeface.createFromAsset(getAssets(), fuente);
+        String font = "font/KG.ttf";
+        this.Real = Typeface.createFromAsset(getAssets(), font);
 
         texto1 = (TextView) findViewById(R.id.nombreSeleccion);
         texto2 = (TextView) findViewById(R.id.precioSeleccion);

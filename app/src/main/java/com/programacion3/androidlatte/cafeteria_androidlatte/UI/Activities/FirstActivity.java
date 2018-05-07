@@ -30,7 +30,7 @@ public class FirstActivity extends AppCompatActivity {
         String font = "font/KG.ttf";
         real = Typeface.createFromAsset(getAssets(), font);
 
-        text1 = findViewById(R.id.appName);
+        text1 = (TextView) findViewById(R.id.appName);
         text1.setTypeface(real);
 
         sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, MODE_PRIVATE);

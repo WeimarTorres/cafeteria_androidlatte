@@ -15,6 +15,9 @@ import com.programacion3.androidlatte.cafeteria_androidlatte.Controller.DBContro
 import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Usuario;
 import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText user;
@@ -27,12 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     static final String SHARED_PREFERENCES = "sharedPreferences";
     static final String KEY_REMEMBER = "rememberOneTimeLogin";
     static final String KEY_IS_ADMINISTRATIVE = "rememberIsAdministrative";
-
-    private String usuario1 = "UPB";
-    private String usuario2 = "Case";
-    private String contraseña1 = "123";
-    private String usuario3;
-    private String contraseña2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,9 +54,6 @@ public class LoginActivity extends AppCompatActivity {
         text3.setTypeface(real);
         text4.setTypeface(real);
 
-        usuario3 = getIntent().getStringExtra("Usuario");
-        contraseña2 = getIntent().getStringExtra("Contraseña");
-
         user = findViewById(R.id.userName);
         password = findViewById(R.id.password);
         code = findViewById(R.id.codeLogin);
@@ -75,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
             intent = new Intent(this, RegisterActivity.class);
             startActivity(intent);
         } else if (view.getId() == R.id.enter) {
-            if (!esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user, password)) {
+            if (!esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user.getText().toString(), password.getText().toString())) {
                 user.setText("");
                 password.setText("");
                 if (checkBox.isChecked()) {
@@ -87,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 intent = new Intent(this, MenuActivity.class);
                 startActivity(intent);
-            } else if (esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user, password)) {
+            } else if (esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user.getText().toString(), password.getText().toString())) {
                 user.setText("");
                 password.setText("");
                 if (checkBox.isChecked()) {
@@ -95,7 +89,6 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putBoolean(KEY_REMEMBER, true);
                     editor.putBoolean(KEY_IS_ADMINISTRATIVE, true);
                     editor.apply();
-                    Toast.makeText(this, "SharePreferences is ok", Toast.LENGTH_SHORT).show();
                 }
                 intent = new Intent(this, MenuCaseActivity.class);
                 startActivity(intent);
@@ -107,16 +100,16 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    public boolean verificarDatos(EditText usuario, EditText contraseña) {
-        if (usuario3 != null && contraseña2 != null) {
-            return (usuario1.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText()))) ||
-                    (usuario2.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText()))) ||
-                    (usuario3.equals(String.valueOf(usuario.getText())) && contraseña2.equals(String.valueOf(contraseña.getText())));
-                //TODO verificar con codigo upb
-        } else {
-            return (usuario1.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText()))) ||
-                    (usuario2.equals(String.valueOf(usuario.getText())) && contraseña1.equals(String.valueOf(contraseña.getText())));
+    public boolean verificarDatos(String user, String password) {
+        List<Usuario> userList;
+        userList = dbController.selectAllUsers();
+        boolean verified = false;
+        for (Usuario user1: userList) {
+            if (user1.getUsername().equals(user) && user1.getPassword().equals(password)) {
+                verified = true;
+            }
         }
+        return verified;
     }
 
     public boolean esAdministrativo(int codeUPB) {

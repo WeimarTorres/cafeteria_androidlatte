@@ -57,7 +57,6 @@ public class RegisterActivity extends AppCompatActivity {
                     intent = new Intent(this, LoginActivity.class);
                     dbController.insertUsuario(user.getText().toString(),
                             Integer.parseInt(code.getText().toString()), password.getText().toString());
-                    Toast.makeText(this, "Insertado coor", Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                 } else {
                     Toast.makeText(this, "El código UPB ya esta en uso", Toast.LENGTH_SHORT).show();
@@ -70,9 +69,9 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public boolean isVerified(int codeUPB) {
-        List<Usuario> codeList = dbController.selectAllUsers();
+        List<Usuario> userList = dbController.selectAllUsers();
         boolean verified = true;
-        for (Usuario user: codeList) {
+        for (Usuario user: userList) {
             if (user.getCodigo() == codeUPB){
                 verified = false;
             }

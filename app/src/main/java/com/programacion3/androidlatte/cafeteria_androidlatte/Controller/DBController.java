@@ -21,7 +21,7 @@ public class DBController extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE 'USUARIOS' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Usuario' TEXT, 'CodigoUPB' INTEGER UNIQUE, 'Contraseña' TEXT, 'esAdministrador' INTEGER)");
-        //Codigo UPB? Para relacionar tablas
+        //Codigo UPB? Para relacionar tabla
         sqLiteDatabase.execSQL("CREATE TABLE 'INVENTARIO' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Codigo' INTEGER UNIQUE, 'Nombre' TEXT, 'Cantidad' INTEGER, 'Precio' INTEGER)");
         //TODO Horario con datetime()
         sqLiteDatabase.execSQL("CREATE TABLE 'RESERVAS' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'CodigoUPB' INTEGER, 'Codigo' INTEGER, 'Horario' TEXT)");
@@ -58,7 +58,7 @@ public class DBController extends SQLiteOpenHelper {
             contentValues.put("Contraseña", password);
             contentValues.put("esAdministrador", 1);
 
-            database.insertOrThrow("USUARIO", null, contentValues);
+            database.insertOrThrow("USUARIOS", null, contentValues);
         } catch (SQLException e) {
         }
     }
@@ -72,8 +72,9 @@ public class DBController extends SQLiteOpenHelper {
             contentValues.put("Contraseña", password);
             contentValues.put("esAdministrador", 0);
 
-            getWritableDatabase().insertOrThrow("USUARIO", null, contentValues);
+            getWritableDatabase().insertOrThrow("USUARIOS", null, contentValues);
         } catch (SQLException e) {
+            throw e;
         }
     }
 
@@ -88,6 +89,7 @@ public class DBController extends SQLiteOpenHelper {
 
     public Usuario selectUser(int codeUPB) {
         Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM USUARIOS WHERE CodigoUPB = " + codeUPB, null);
+        cursor.moveToFirst();
         Usuario user = new Usuario(cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getInt(4));
         return user;
     }

@@ -3,53 +3,55 @@ package com.programacion3.androidlatte.cafeteria_androidlatte.Models;
 import java.io.Serializable;
 
 public class Item implements Serializable{
-    private String nombre;
-    private int cant, img, id;
-    private double precio;
+    private String name;
+    private int quantity;
+    private int image;
+    private int codeFood;
+    private int price;
 
-    public Item( int id, String nombre, int cant, int img, double precio ){
-        this.id = id;
-        this.nombre = nombre;
-        this.cant = cant;
-        this.img = img;
-        this.precio = precio;
+    public Item(int codeFood, String name, int quantity, int price, int image){
+        this.codeFood = codeFood;
+        this.name = name;
+        this.quantity = quantity;
+        this.image = image;
+        this.price = price;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setCant(int cant) {
-        this.cant = cant;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
-    public void setImg(int img) {
-        this.img = img;
+    public void setImage(int image) {
+        this.image = image;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCodeFood(int codeFood) {
+        this.codeFood = codeFood;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setPrice(int price) {
+        this.price = price;
     }
 
-    public String getNombre() { return nombre; }
+    public String getName() { return name; }
 
-    public int getCant() {
-        return cant;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public int getImg() {
-        return img;
+    public int getImage() {
+        return image;
     }
 
-    public int getId() {
-        return id;
+    public int getCodeFood() {
+        return codeFood;
     }
 
-    public double getPrecio() {
-        return precio;
+    public int getPrice() {
+        return price;
     }
 }

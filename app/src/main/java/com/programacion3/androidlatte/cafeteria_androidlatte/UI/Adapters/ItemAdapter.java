@@ -38,7 +38,7 @@ public class ItemAdapter extends BaseAdapter{
 
     @Override
     public long getItemId(int i) {
-        return itemList.get(i).getId();
+        return itemList.get(i).getCodeFood();
     }
 
     @Override
@@ -46,17 +46,17 @@ public class ItemAdapter extends BaseAdapter{
         convertView = inflater.inflate(R.layout.layout_list_item, null);
 
         TextView textView = convertView.findViewById(R.id.NombreItem);
-        textView.setText(itemList.get(i).getNombre());
+        textView.setText(itemList.get(i).getName());
 
-        TextView textView1 = convertView.findViewById(R.id.precio);
-        String precio = Double.toString(itemList.get(i).getPrecio());
+        TextView textView1 = convertView.findViewById(R.id.price);
+        String precio = Double.toString(itemList.get(i).getPrice());
         textView1.setText(precio);
 
-        ImageView imageView = convertView.findViewById(R.id.img);
-        imageView.setImageResource(itemList.get(i).getImg());
+        ImageView imageView = convertView.findViewById(R.id.image);
+        imageView.setImageResource(itemList.get(i).getImage());
 
         ProgressBar progressBar = convertView.findViewById(R.id.cantidad);
-        progressBar.setProgress(itemList.get(i).getCant());
+        progressBar.setProgress(itemList.get(i).getQuantity());
 
         return convertView;
     }

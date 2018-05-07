@@ -6,6 +6,111 @@
     android:orientation="vertical"
     android:background="@drawable/fondo_pizarra"
     tools:context="com.programacion3.androidlatte.cafeteria_androidlatte.UI.Activities.ReservasCaseActivity">
+    <TextView
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="@string/Menu"
+        android:textColor="@color/pinkChalk"
+        android:textSize="@dimen/titleText"/>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/desayuno"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="121dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="63dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/smooth_square"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/sandwich"
+            android:text="@string/Desayuno"
+            android:textColor="@color/whiteChalk"
+            android:textSize="@dimen/mediumText"
+
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/almuerzo"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="121dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/smooth_square"
+            android:drawablePadding="1dp"
+            android:drawableTop="@drawable/pollo"
+            android:text="@string/Almuerzo"
+            android:textColor="@color/whiteChalk"
+            android:textSize="@dimen/mediumText"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/merienda"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="121dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="63dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/smooth_square"
+            android:drawablePadding="0dp"
+            android:drawableTop="@drawable/merienda"
+            android:text="@string/Merienda"
+            android:textColor="@color/whiteChalk"
+            android:textSize="@dimen/mediumText"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/combos"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="121dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/smooth_square"
+            android:drawableTop="@drawable/combos"
+            android:text="@string/Combos"
+            android:textColor="@color/whiteChalk"
+            android:textSize="@dimen/mediumText"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/snacks"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/smooth_square"
+        android:drawableLeft="@drawable/croissant"
+        android:drawableRight="@drawable/yogurt"
+        android:paddingHorizontal="@dimen/bigTextBoton"
+        android:text="@string/Snacks"
+        android:textColor="@color/whiteChalk"
+        android:textSize="@dimen/mediumText" />
 
 </LinearLayout>

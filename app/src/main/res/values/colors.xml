@@ -2,8 +2,9 @@
 <resources>
     <color name="colorPrimary">#453319</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorButton">#77b97f</color>
     <color name="colorAccent">#f5f9ad</color>
+
+    <color name="colorButton">#77b97f</color>
     <color name="colorText">#4f9cdf</color>
     <color name="colorTextHint">#f2f0f0</color>
     <color name="colorCheckBox">#7e18c6bd</color>

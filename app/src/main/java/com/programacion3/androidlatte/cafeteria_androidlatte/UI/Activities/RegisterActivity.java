@@ -36,8 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
         String font = "font/KG.ttf";
         real = Typeface.createFromAsset(getAssets(), font);
 
-        text1 = findViewById(R.id.buttonRegister);
-        text2 = findViewById(R.id.appName);
+        text1 = (TextView) findViewById(R.id.buttonRegister);
+        text2 = (TextView) findViewById(R.id.appName);
         text1.setTypeface(real);
         text2.setTypeface(real);
 

@@ -48,10 +48,10 @@ public class LoginActivity extends AppCompatActivity {
         String font = "font/KG.ttf";
         real = Typeface.createFromAsset(getAssets(), font);
 
-        text1 = findViewById(R.id.enter);
-        text2 = findViewById(R.id.New);
-        text3 = findViewById(R.id.appName);
-        text4 = findViewById(R.id.checkboxLogin);
+        text1 = (TextView) findViewById(R.id.enter);
+        text2 = (TextView) findViewById(R.id.New);
+        text3 = (TextView) findViewById(R.id.appName);
+        text4 = (TextView) findViewById(R.id.checkboxLogin);
         text1.setTypeface(real);
         text2.setTypeface(real);
         text3.setTypeface(real);

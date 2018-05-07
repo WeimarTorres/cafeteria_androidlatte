@@ -28,16 +28,17 @@ public class MenuActivity extends AppCompatActivity {
 
     private Memoria memoria;
 
-    private static int ALMUERZO = 1;
     private static int DESAYUNO = 1;
-    private static int MERIENDA = 1;
-    private static int COMBOS = 1;
-    private static int SNACKS = 1;
+    private static int ALMUERZO = 2;
+    private static int MERIENDA = 3;
+    private static int COMBOS = 4;
+    private static int SNACKS = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
         memoria = new Memoria();
         memoria.setItemDisponible(new Item(1,"Hamburguesa", 50, R.drawable.hamburguesa, 15));
         memoria.setItemDisponible(new Item(2, "Soda", 100, R.drawable.soda, 5));
@@ -73,29 +74,34 @@ public class MenuActivity extends AppCompatActivity {
 
     public void click(View view) {
         Intent intent;
-        if (view.getId() == R.id.almuerzo) {
-            intent = new Intent(this, DisplayAlmuerzoActivity.class);
-            intent.putExtra("memoria", memoria);
-            // TODO alguito que agregar aqui...
-            startActivityForResult(intent, ALMUERZO);
-        } else if(view.getId() == R.id.desayuno){
+        if(view.getId() == R.id.desayuno){
             intent = new Intent(this, DisplayDesayunoActivity.class);
             intent.putExtra("memoria", memoria);
+            intent.putExtra("recuperar:", DESAYUNO);
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, DESAYUNO);
+        } else if (view.getId() == R.id.almuerzo) {
+            intent = new Intent(this, DisplayAlmuerzoActivity.class);
+            intent.putExtra("memoria", memoria);
+            intent.putExtra("recuperar:", ALMUERZO);
+            // TODO alguito que agregar aqui...
+            startActivityForResult(intent, ALMUERZO);
         } else if(view.getId() == R.id.merienda){
             intent = new Intent(this, DisplayMeriendaActivity.class);
             intent.putExtra("memoria", memoria);
+            intent.putExtra("recuperar:", MERIENDA);
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, MERIENDA);
         } else if(view.getId() == R.id.combos){
             intent = new Intent(this, DisplayCombosActivity.class);
             intent.putExtra("memoria", memoria);
+            intent.putExtra("recuperar:", COMBOS);
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, COMBOS);
         } else if(view.getId() == R.id.snacks){
             intent = new Intent(this, DisplaySnacksActivity.class);
             intent.putExtra("memoria", memoria);
+            intent.putExtra("recuperar:", SNACKS);
             // TODO alguito que agregar aqui...
             startActivityForResult(intent, SNACKS);
         }

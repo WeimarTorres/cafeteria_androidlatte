@@ -30,6 +30,8 @@ public class DisplayAlmuerzoActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         memoria = (Memoria)intent.getSerializableExtra("memoria");
+
+        int num = intent.getIntExtra("recuperar:", 2);
         itemList = memoria.getListaItemDisponible();
 
         ItemAdapter itemAdapter = new ItemAdapter(this, itemList);

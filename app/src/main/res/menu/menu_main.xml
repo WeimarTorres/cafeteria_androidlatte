@@ -5,7 +5,7 @@
         android:onClick="onMenuClick"
         android:title="@string/Información">
         <menu>
-            <item android:id="@+id/nombre"
+            <item android:id="@+id/name"
                 android:title="@string/Nombre">
             </item>
             <item android:id="@+id/apellido"

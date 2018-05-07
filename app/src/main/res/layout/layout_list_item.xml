@@ -5,7 +5,7 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/image"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_centerVertical="true"
@@ -16,8 +16,8 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_toEndOf="@id/img"
-        android:layout_toRightOf="@id/img">
+        android:layout_toEndOf="@id/image"
+        android:layout_toRightOf="@id/image">
 
         <TextView
             android:id="@+id/NombreItem"
@@ -38,7 +38,7 @@
 
 
     <TextView
-        android:id="@+id/precio"
+        android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

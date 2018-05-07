@@ -41,11 +41,11 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
         nombre = findViewById(R.id.nombreSeleccion);
         precio =findViewById(R.id.precioSeleccion);
 
-        nombre.setText(itemSeleccionado.getNombre());
-        precio.setText("Precio: " + String.valueOf(itemSeleccionado.getPrecio()));
+        nombre.setText(itemSeleccionado.getName());
+        precio.setText("Precio: " + String.valueOf(itemSeleccionado.getPrice()));
 
         imageView = findViewById(R.id.imagen);
-        imageView.setImageResource(itemSeleccionado.getImg());
+        imageView.setImageResource(itemSeleccionado.getImage());
 
         String font = "font/KG.ttf";
         this.Real = Typeface.createFromAsset(getAssets(), font);

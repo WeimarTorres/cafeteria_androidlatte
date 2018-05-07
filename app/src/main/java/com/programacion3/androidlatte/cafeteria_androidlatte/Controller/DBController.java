@@ -25,16 +25,16 @@ public class DBController extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("CREATE TABLE 'INVENTARIO' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Codigo' INTEGER UNIQUE, 'Nombre' TEXT, 'Cantidad' INTEGER, 'Precio' INTEGER)");
         //TODO Horario con datetime()
         sqLiteDatabase.execSQL("CREATE TABLE 'RESERVAS' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'CodigoUPB' INTEGER, 'Codigo' INTEGER, 'Horario' TEXT)");
-        insertAdmin("Adela1", 1, "1234");
-        insertAdmin("Adela2", 2, "1234");
-        insertAdmin("Adela3", 3, "1234");
-        insertAdmin("Adela4", 4, "1234");
-        insertAdmin("Adela5", 5, "1234");
-        insertAdmin("Adela6", 6, "1234");
-        insertAdmin("Adela7", 7, "1234");
-        insertAdmin("Adela8", 8, "1234");
-        insertAdmin("Adela9", 9, "1234");
-        insertAdmin("Adela10", 10, "12345");
+        insertAdmin(sqLiteDatabase,"Adela1", 1, "1234");
+        insertAdmin(sqLiteDatabase,"Adela2", 2, "1234");
+        insertAdmin(sqLiteDatabase,"Adela3", 3, "1234");
+        insertAdmin(sqLiteDatabase,"Adela4", 4, "1234");
+        insertAdmin(sqLiteDatabase,"Adela5", 5, "1234");
+        insertAdmin(sqLiteDatabase,"Adela6", 6, "1234");
+        insertAdmin(sqLiteDatabase,"Adela7", 7, "1234");
+        insertAdmin(sqLiteDatabase,"Adela8", 8, "1234");
+        insertAdmin(sqLiteDatabase,"Adela9", 9, "1234");
+        insertAdmin(sqLiteDatabase,"Adela10", 10, "12345");
     }
 
     @Override
@@ -46,6 +46,10 @@ public class DBController extends SQLiteOpenHelper {
     }
 
     private void insertAdmin(String user, int code, String password) {
+        insertAdmin(getWritableDatabase(), user, code, password);
+    }
+
+    private void insertAdmin(SQLiteDatabase database, String user, int code, String password) {
         try {
             ContentValues contentValues = new ContentValues();
 
@@ -54,7 +58,7 @@ public class DBController extends SQLiteOpenHelper {
             contentValues.put("Contraseña", password);
             contentValues.put("esAdministrador", 1);
 
-            getWritableDatabase().insertOrThrow("USUARIO", null, contentValues);
+            database.insertOrThrow("USUARIO", null, contentValues);
         } catch (SQLException e) {
         }
     }

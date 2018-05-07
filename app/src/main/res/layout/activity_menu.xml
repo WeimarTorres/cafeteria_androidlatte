@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:text="@string/Menu"
         android:textColor="@color/pinkChalk"
@@ -31,8 +31,8 @@
             android:layout_width="121dp"
             android:layout_height="100dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="63dp"
-            android:layout_marginStart="63dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginStart="62dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/smooth_square"
             android:drawablePadding="2dp"
@@ -40,26 +40,24 @@
             android:onClick="click"
             android:text="@string/Desayuno"
             android:textColor="@color/whiteChalk"
-            android:textSize="@dimen/mediumText"
-
-            android:textStyle="bold" />
+            android:textSize="@dimen/mediumText"/>
 
         <Button
             android:id="@+id/almuerzo"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="121dp"
             android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="28dp"
             android:background="@drawable/smooth_square"
-            android:drawablePadding="1dp"
+            android:drawablePadding="2dp"
             android:drawableTop="@drawable/pollo"
             android:onClick="click"
             android:text="@string/Almuerzo"
             android:textColor="@color/whiteChalk"
-            android:textSize="@dimen/mediumText"
-            android:textStyle="bold" />
+            android:textSize="@dimen/mediumText" />
 
     </LinearLayout>
 
@@ -74,33 +72,33 @@
             android:layout_width="121dp"
             android:layout_height="100dp"
             android:layout_marginBottom="20dp"
-            android:layout_marginLeft="63dp"
-            android:layout_marginStart="63dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginStart="62dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/smooth_square"
-            android:drawablePadding="0dp"
+            android:drawablePadding="2dp"
             android:drawableTop="@drawable/merienda"
             android:onClick="click"
             android:text="@string/Merienda"
             android:textColor="@color/whiteChalk"
-            android:textSize="@dimen/mediumText"
-            android:textStyle="bold" />
+            android:textSize="@dimen/mediumText"/>
 
         <Button
             android:id="@+id/combos"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="121dp"
             android:layout_height="100dp"
+            android:layout_marginBottom="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="29dp"
             android:background="@drawable/smooth_square"
+            android:drawablePadding="2dp"
             android:drawableTop="@drawable/combos"
             android:onClick="click"
             android:text="@string/Combos"
             android:textColor="@color/whiteChalk"
-            android:textSize="@dimen/mediumText"
-            android:textStyle="bold" />
+            android:textSize="@dimen/mediumText"/>
 
     </LinearLayout>
 
@@ -108,9 +106,9 @@
         android:id="@+id/snacks"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="75dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/smooth_square"
         android:drawableLeft="@drawable/croissant"
         android:drawableRight="@drawable/yogurt"

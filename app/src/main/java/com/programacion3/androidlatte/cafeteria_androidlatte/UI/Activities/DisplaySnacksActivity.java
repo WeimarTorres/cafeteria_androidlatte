@@ -33,7 +33,7 @@ public class DisplaySnacksActivity extends AppCompatActivity {
 
         allItemList = dbController.selectAllItems();
         for (Item item : allItemList) {
-            if ((item.getCodeFood() / 100) == 4) {
+            if ((item.getCodeFood() / 100) == 5) {
                 itemList.add(item);
             }
         }

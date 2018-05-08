@@ -39,6 +39,7 @@
         android:hint="@string/Codigo"
         android:singleLine="true"
         android:textStyle="italic"
+        android:inputType=""
         android:textColor="@color/whiteChalk"
         android:textColorHint="@color/colorTextHint"
         android:textSize="@dimen/mediumText" />

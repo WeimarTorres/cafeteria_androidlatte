@@ -105,10 +105,14 @@ public class DBController extends SQLiteOpenHelper {
     }
 
     public Usuario selectUser(int codeUPB) {
-        Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM USUARIOS WHERE CodigoUPB = " + codeUPB, null);
-        cursor.moveToFirst();
-        Usuario user = new Usuario(cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getInt(4));
-        return user;
+        try {
+            Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM USUARIOS WHERE CodigoUPB = " + codeUPB, null);
+            cursor.moveToFirst();
+            Usuario user = new Usuario(cursor.getString(1), cursor.getInt(2), cursor.getString(3), cursor.getInt(4));
+            return user;
+        } catch (IndexOutOfBoundsException e) {
+            return new Usuario("Error", -1, "0", 0);
+        }
     }
 
     public void updateUsuario(String nombre, int codigoUpb, String password) {

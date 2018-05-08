@@ -51,5 +51,4 @@ public class DisplayMeriendaActivity extends AppCompatActivity {
         });
 
     }
-
 }

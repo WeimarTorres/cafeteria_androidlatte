@@ -41,6 +41,15 @@ public class DBController extends SQLiteOpenHelper {
         //TODO insertar comidas
         //ejemplo
         insertFood(sqLiteDatabase, 101, "Leche", 20, 5, R.drawable.soda);
+        insertFood(sqLiteDatabase, 102, "Leche2", 20, 5, R.drawable.soda);
+        insertFood(sqLiteDatabase, 201, "Papas", 20, 5, R.drawable.hamburguesa);
+        insertFood(sqLiteDatabase, 202, "Papas2", 20, 5, R.drawable.hamburguesa);
+        insertFood(sqLiteDatabase, 301, "Leche", 20, 5, R.drawable.soda);
+        insertFood(sqLiteDatabase, 302, "Leche2", 20, 5, R.drawable.soda);
+        insertFood(sqLiteDatabase, 401, "Papas", 20, 5, R.drawable.hamburguesa);
+        insertFood(sqLiteDatabase, 402, "Papas2", 20, 5, R.drawable.hamburguesa);
+        insertFood(sqLiteDatabase, 501, "Leche", 20, 5, R.drawable.soda);
+        insertFood(sqLiteDatabase, 502, "Leche2", 20, 5, R.drawable.soda);
 
     }
 

@@ -38,9 +38,6 @@ public class MenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        memoria = new Memoria();
-        memoria.setItemDisponible(new Item(1,"Hamburguesa", 50, R.drawable.hamburguesa, 15));
-        memoria.setItemDisponible(new Item(2, "Soda", 100, R.drawable.soda, 5));
 
         String font = "font/KG.ttf";
         this.Real = Typeface.createFromAsset(getAssets(), font);
@@ -51,6 +48,8 @@ public class MenuActivity extends AppCompatActivity {
         texto4 = (TextView) findViewById(R.id.combos);
         texto5 = (TextView) findViewById(R.id.almuerzo);
         texto6 = (TextView) findViewById(R.id.snacks);
+
+        memoria = new Memoria();
 
         texto1.setTypeface(Real);
         texto2.setTypeface(Real);
@@ -75,48 +74,21 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent;
         if (view.getId() == R.id.almuerzo) {
             intent = new Intent(this, DisplayAlmuerzoActivity.class);
-            intent.putExtra("memoria", memoria);
-            // TODO alguito que agregar aqui...
-            startActivityForResult(intent, ALMUERZO);
+            startActivity(intent);
         } else if(view.getId() == R.id.desayuno){
             intent = new Intent(this, DisplayDesayunoActivity.class);
-            intent.putExtra("memoria", memoria);
-            // TODO alguito que agregar aqui...
-            startActivityForResult(intent, DESAYUNO);
+            startActivity(intent);
         } else if(view.getId() == R.id.merienda){
             intent = new Intent(this, DisplayMeriendaActivity.class);
-            intent.putExtra("memoria", memoria);
-            // TODO alguito que agregar aqui...
-            startActivityForResult(intent, MERIENDA);
+            startActivity(intent);
         } else if(view.getId() == R.id.combos){
             intent = new Intent(this, DisplayCombosActivity.class);
-            intent.putExtra("memoria", memoria);
-            // TODO alguito que agregar aqui...
-            startActivityForResult(intent, COMBOS);
+            startActivity(intent);
         } else if(view.getId() == R.id.snacks){
             intent = new Intent(this, DisplaySnacksActivity.class);
-            intent.putExtra("memoria", memoria);
-            // TODO alguito que agregar aqui...
-            startActivityForResult(intent, SNACKS);
+            startActivity(intent);
         }
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == ALMUERZO) {
-            memoria = (Memoria) data.getSerializableExtra("memoria");
-        } else if (requestCode == DESAYUNO) {
-            memoria = (Memoria) data.getSerializableExtra("memoria");
-        } else if (requestCode == MERIENDA) {
-            memoria = (Memoria) data.getSerializableExtra("memoria");
-        } else if (requestCode == COMBOS) {
-            memoria = (Memoria) data.getSerializableExtra("memoria");
-        } else if (requestCode == SNACKS) {
-            memoria = (Memoria) data.getSerializableExtra("memoria");
-        }
-    }
-
 
     public void onMenuClick(MenuItem item) {
         if (item.getItemId() == R.id.itemDialog) {

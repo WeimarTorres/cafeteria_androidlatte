@@ -53,7 +53,7 @@ public class ItemAdapter extends BaseAdapter{
         textView1.setText(precio);
 
         ImageView imageView = convertView.findViewById(R.id.image);
-        imageView.setImageResource(itemList.get(i).getImage());
+        imageView.setImageDrawable(context.getResources().getDrawable(itemList.get(i).getImage()));
 
         ProgressBar progressBar = convertView.findViewById(R.id.cantidad);
         progressBar.setProgress(itemList.get(i).getQuantity());

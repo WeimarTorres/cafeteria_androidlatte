@@ -77,7 +77,6 @@ public class LoginActivity extends AppCompatActivity {
                     editor.putBoolean(KEY_REMEMBER, true);
                     editor.putBoolean(KEY_IS_ADMINISTRATIVE, false);
                     editor.apply();
-                    Toast.makeText(this, "SharePreferences is ok", Toast.LENGTH_SHORT).show();
                 }
                 intent = new Intent(this, MenuActivity.class);
                 startActivity(intent);

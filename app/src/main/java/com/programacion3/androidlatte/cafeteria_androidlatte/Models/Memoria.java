@@ -11,6 +11,11 @@ import java.util.List;
 public class Memoria implements Serializable {
 
     private List<Item> listaItemReservado = new LinkedList<Item>();
+
+    public void setListaItemDisponible(List<Item> listaItemDisponible) {
+        this.listaItemDisponible = listaItemDisponible;
+    }
+
     private List<Item> listaItemDisponible = new LinkedList<Item>();
     private int numeroItemReservado = 0;
     private int numeroItemDisponible = 0;
@@ -22,6 +27,8 @@ public class Memoria implements Serializable {
     public List<Item> getListaItemDisponible() {
         return listaItemDisponible;
     }
+
+
 
     public void setItemReserva(Item item) {
         listaItemReservado.add(numeroReservado(), item);

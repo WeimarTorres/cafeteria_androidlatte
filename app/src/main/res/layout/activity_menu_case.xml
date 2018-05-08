@@ -16,12 +16,13 @@
         android:layout_marginTop="40dp"
         android:text="@string/app_name"
         android:textColor="@color/redChalk"
-        android:textSize="@dimen/titleText" />
+        android:textSize="@dimen/titleText"
+        android:textStyle="italic"/>
 
     <Button
         android:id="@+id/editar"
         android:onClick="click"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:background="@color/greenChalk"
@@ -31,9 +32,9 @@
     <Button
         android:id="@+id/reservas"
         android:onClick="click"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
         android:background="@color/greenChalk"
         android:text="@string/Reservas"
         android:textSize="@dimen/bigTextBoton"/>

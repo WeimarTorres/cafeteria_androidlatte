@@ -28,11 +28,11 @@ public class MenuActivity extends AppCompatActivity {
 
     private Memoria memoria;
 
-    private static int ALMUERZO = 1;
     private static int DESAYUNO = 1;
-    private static int MERIENDA = 1;
-    private static int COMBOS = 1;
-    private static int SNACKS = 1;
+    private static int ALMUERZO = 2;
+    private static int MERIENDA = 3;
+    private static int COMBOS = 4;
+    private static int SNACKS = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

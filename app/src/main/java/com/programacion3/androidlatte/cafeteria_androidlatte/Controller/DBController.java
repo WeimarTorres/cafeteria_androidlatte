@@ -27,6 +27,7 @@ public class DBController extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("CREATE TABLE 'INVENTARIO' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Codigo' INTEGER UNIQUE, 'Nombre' TEXT, 'Cantidad' INTEGER, 'Precio' INTEGER, 'Imagen' INTEGER)");
         //TODO Horario con datetime()
         sqLiteDatabase.execSQL("CREATE TABLE 'RESERVAS' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'CodigoUPB' INTEGER, 'Codigo' INTEGER, 'Horario' TEXT)");
+
         insertAdmin(sqLiteDatabase, "Adela1", 1, "1234");
         insertAdmin(sqLiteDatabase, "Adela2", 2, "1234");
         insertAdmin(sqLiteDatabase, "Adela3", 3, "1234");
@@ -41,15 +42,15 @@ public class DBController extends SQLiteOpenHelper {
         //TODO insertar comidas
         //ejemplo
         insertFood(sqLiteDatabase, 101, "Leche", 20, 5, R.drawable.soda);
-        insertFood(sqLiteDatabase, 102, "Leche2", 20, 5, R.drawable.soda);
-        insertFood(sqLiteDatabase, 201, "Papas", 20, 5, R.drawable.hamburguesa);
-        insertFood(sqLiteDatabase, 202, "Papas2", 20, 5, R.drawable.hamburguesa);
-        insertFood(sqLiteDatabase, 301, "Leche", 20, 5, R.drawable.soda);
-        insertFood(sqLiteDatabase, 302, "Leche2", 20, 5, R.drawable.soda);
-        insertFood(sqLiteDatabase, 401, "Papas", 20, 5, R.drawable.hamburguesa);
-        insertFood(sqLiteDatabase, 402, "Papas2", 20, 5, R.drawable.hamburguesa);
-        insertFood(sqLiteDatabase, 501, "Leche", 20, 5, R.drawable.soda);
-        insertFood(sqLiteDatabase, 502, "Leche2", 20, 5, R.drawable.soda);
+        insertFood(sqLiteDatabase, 102, "Panqueque", 20, 5, R.drawable.panqueques);
+        insertFood(sqLiteDatabase, 201, "Milanesa", 20, 5, R.drawable.comidastipicasargentinamilanesa);
+        insertFood(sqLiteDatabase, 202, "Lasania", 20, 5, R.drawable.lasana);
+        insertFood(sqLiteDatabase, 301, "Verduras", 20, 5, R.drawable.verdura);
+        insertFood(sqLiteDatabase, 302, "Frutas", 20, 5, R.drawable.im);
+        insertFood(sqLiteDatabase, 401, "Combo Hamburguesa", 20, 5, R.drawable.comidarapida);
+        insertFood(sqLiteDatabase, 402, "Silpancho", 20, 5, R.drawable.silpancho);
+        insertFood(sqLiteDatabase, 501, "Sandwitch de palta", 20, 5, R.drawable.foodie);
+        insertFood(sqLiteDatabase, 502, "Lays", 20, 5, R.drawable.rrr);
 
     }
 

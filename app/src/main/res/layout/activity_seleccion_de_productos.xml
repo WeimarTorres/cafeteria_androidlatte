@@ -48,81 +48,9 @@
             android:id="@+id/ingredientes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingredientes a escoger:"
             android:textColor="@color/blueChalk"
             android:textSize="@dimen/mediumText" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tomate"
-            android:textStyle="italic"
-            android:textColor="@color/turquoiseChalk"
-            android:textSize="@dimen/mediumText" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lechuga"
-            android:textStyle="italic"
-            android:textColor="@color/turquoiseChalk"
-            android:textSize="@dimen/mediumText" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cebolla"
-            android:textStyle="italic"
-            android:textColor="@color/turquoiseChalk"
-            android:textSize="@dimen/mediumText" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Queso"
-            android:textStyle="italic"
-            android:textColor="@color/turquoiseChalk"
-            android:textSize="@dimen/mediumText" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Salsa"
-            android:textStyle="italic"
-            android:textColor="@color/turquoiseChalk"
-            android:textSize="@dimen/mediumText" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Papas"
-            android:textStyle="italic"
-            android:textColor="@color/turquoiseChalk"
-            android:textSize="@dimen/mediumText" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pepinillo"
-            android:textStyle="italic"
-            android:textColor="@color/turquoiseChalk"
-            android:textSize="@dimen/mediumText" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Aros de cebolla"
-            android:textStyle="italic"
-            android:textColor="@color/turquoiseChalk"
-            android:textSize="@dimen/mediumText" />
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Repollo"
-            android:textStyle="italic"
-            android:textColor="@color/turquoiseChalk"
-            android:textSize="@dimen/mediumText" />
 
         <Button
             android:id="@+id/enviar"

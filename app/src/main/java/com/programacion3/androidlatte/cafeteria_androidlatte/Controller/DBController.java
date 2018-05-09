@@ -54,12 +54,14 @@ public class DBController extends SQLiteOpenHelper {
         insertFood(sqLiteDatabase, 302, "Frutas", 20, 5, R.drawable.im);
         insertFood(sqLiteDatabase, 303,"Croisssant",15,5,R.drawable.croisant);
         insertFood(sqLiteDatabase,304,"Ensalada de frutas",10,7, R.drawable.ensalada_de_frutas);
+        insertFood(sqLiteDatabase,305,"Trozo de Pizza",15,8, R.drawable.pizza_trozo);
 
 
         insertFood(sqLiteDatabase, 401, "Combo Hamburguesa con refresco", 20, 5, R.drawable.comidarapida);
         insertFood(sqLiteDatabase, 402, "Silpancho", 20, 5, R.drawable.silpancho);
         insertFood(sqLiteDatabase,403,"Hamburguesa con papas",10,15, R.drawable.hamburguesa_papas);
         insertFood(sqLiteDatabase,404,"Pizza con Sprite",5,9, R.drawable.pizza_pepsi);
+        insertFood(sqLiteDatabase, 405, "Hot Dog", 7, 12, R.drawable.hot_dog);
 
         insertFood(sqLiteDatabase, 501, "Sandwitch de palta", 20, 5, R.drawable.foodie);
         insertFood(sqLiteDatabase, 502, "Lays", 20, 5, R.drawable.rrr);

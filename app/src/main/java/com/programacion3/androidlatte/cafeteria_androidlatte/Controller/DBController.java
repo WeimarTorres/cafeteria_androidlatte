@@ -38,16 +38,36 @@ public class DBController extends SQLiteOpenHelper {
         insertAdmin(sqLiteDatabase, "Adela9", 9, "1234");
         insertAdmin(sqLiteDatabase, "Adela10", 10, "12345");
 
-        insertFood(sqLiteDatabase, 101, "Leche", 20, 5, R.drawable.soda);
-        insertFood(sqLiteDatabase, 102, "Panqueque", 20, 5, R.drawable.panqueques);
+        insertFood(sqLiteDatabase, 101, "Leche", 20, 5, R.drawable.leche_taza);
+        insertFood(sqLiteDatabase,102,"Cafe",15,5,R.drawable.cafe_taza);
+        insertFood(sqLiteDatabase, 103,"Té",10,5,R.drawable.te_taza);
+        insertFood(sqLiteDatabase,104,"Jugo de naranja",15,4,R.drawable.jugo_naranja);
+        insertFood(sqLiteDatabase, 105, "Panqueque", 20, 5, R.drawable.panqueques);
+
         insertFood(sqLiteDatabase, 201, "Milanesa", 20, 5, R.drawable.comidastipicasargentinamilanesa);
-        insertFood(sqLiteDatabase, 202, "Lasania", 20, 5, R.drawable.lasana);
+        insertFood(sqLiteDatabase, 202, "Lassagna", 20, 5, R.drawable.lasana);
+        insertFood(sqLiteDatabase,203,"Albondigas",10,17,R.drawable.albondigas);
+        insertFood(sqLiteDatabase,204,"Spaguetti Alfredo",11,18,R.drawable.spaguetti_alfredo);
+        insertFood(sqLiteDatabase,205,"Alitas",14,20, R.drawable.alitas);
+
         insertFood(sqLiteDatabase, 301, "Verduras", 20, 5, R.drawable.verdura);
         insertFood(sqLiteDatabase, 302, "Frutas", 20, 5, R.drawable.im);
-        insertFood(sqLiteDatabase, 401, "Combo Hamburguesa", 20, 5, R.drawable.comidarapida);
+        insertFood(sqLiteDatabase, 303,"Croisssant",15,5,R.drawable.croisant);
+        insertFood(sqLiteDatabase,304,"Ensalada de frutas",10,7, R.drawable.ensalada_de_frutas);
+        insertFood(sqLiteDatabase,305,"Trozo de Pizza",15,8, R.drawable.pizza_trozo);
+
+
+        insertFood(sqLiteDatabase, 401, "Combo Hamburguesa con refresco", 20, 5, R.drawable.comidarapida);
         insertFood(sqLiteDatabase, 402, "Silpancho", 20, 5, R.drawable.silpancho);
+        insertFood(sqLiteDatabase,403,"Hamburguesa con papas",10,15, R.drawable.hamburguesa_papas);
+        insertFood(sqLiteDatabase,404,"Pizza con Sprite",5,9, R.drawable.pizza_pepsi);
+        insertFood(sqLiteDatabase, 405, "Hot Dog", 7, 12, R.drawable.hot_dog);
+
         insertFood(sqLiteDatabase, 501, "Sandwitch de palta", 20, 5, R.drawable.foodie);
         insertFood(sqLiteDatabase, 502, "Lays", 20, 5, R.drawable.rrr);
+        insertFood(sqLiteDatabase,503,"Salteña",17,6, R.drawable.saltenia);
+        insertFood(sqLiteDatabase,504,"Coca Cola 300 ml",30, 3, R.drawable.coca_300);
+        insertFood(sqLiteDatabase,505,"Tucumana",14,5, R.drawable.tucumana);
 
     }
 

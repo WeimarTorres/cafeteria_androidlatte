@@ -69,32 +69,36 @@ public class LoginActivity extends AppCompatActivity {
             intent = new Intent(this, RegisterActivity.class);
             startActivity(intent);
         } else if (view.getId() == R.id.enter) {
-            if (!esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user.getText().toString(), password.getText().toString())) {
-                user.setText("");
-                password.setText("");
-                if (checkBox.isChecked()) {
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putBoolean(KEY_REMEMBER, true);
-                    editor.putBoolean(KEY_IS_ADMINISTRATIVE, false);
-                    editor.apply();
+            if (code.getText().toString() != "") {
+                if (!esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user.getText().toString(), password.getText().toString())) {
+                    user.setText("");
+                    password.setText("");
+                    if (checkBox.isChecked()) {
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putBoolean(KEY_REMEMBER, true);
+                        editor.putBoolean(KEY_IS_ADMINISTRATIVE, false);
+                        editor.apply();
+                    }
+                    intent = new Intent(this, MenuActivity.class);
+                    startActivity(intent);
+                } else if (esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user.getText().toString(), password.getText().toString())) {
+                    user.setText("");
+                    password.setText("");
+                    if (checkBox.isChecked()) {
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putBoolean(KEY_REMEMBER, true);
+                        editor.putBoolean(KEY_IS_ADMINISTRATIVE, true);
+                        editor.apply();
+                    }
+                    intent = new Intent(this, MenuCaseActivity.class);
+                    startActivity(intent);
+                } else {
+                    user.setText("");
+                    password.setText("");
+                    Toast.makeText(this, "¡Datos Erroneos!", Toast.LENGTH_SHORT).show();
                 }
-                intent = new Intent(this, MenuActivity.class);
-                startActivity(intent);
-            } else if (esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user.getText().toString(), password.getText().toString())) {
-                user.setText("");
-                password.setText("");
-                if (checkBox.isChecked()) {
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putBoolean(KEY_REMEMBER, true);
-                    editor.putBoolean(KEY_IS_ADMINISTRATIVE, true);
-                    editor.apply();
-                }
-                intent = new Intent(this, MenuCaseActivity.class);
-                startActivity(intent);
             } else {
-                user.setText("");
-                password.setText("");
-                Toast.makeText(this, "¡Datos Erroneos!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "No hay datos", Toast.LENGTH_SHORT).show();
             }
         }
     }

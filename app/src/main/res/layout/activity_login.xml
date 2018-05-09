@@ -27,7 +27,7 @@
         android:hint="@string/Usuario"
         android:singleLine="true"
         android:textStyle="italic"
-        android:textColor="@color/whiteChalk"
+        android:textColor="@color/blueChalk"
         android:textColorHint="@color/colorTextHint"
         android:textSize="@dimen/mediumText" />
 
@@ -39,8 +39,9 @@
         android:hint="@string/Codigo"
         android:singleLine="true"
         android:textStyle="italic"
-        android:inputType=""
-        android:textColor="@color/whiteChalk"
+        android:inputType="number"
+        android:maxLength="5"
+        android:textColor="@color/blueChalk"
         android:textColorHint="@color/colorTextHint"
         android:textSize="@dimen/mediumText" />
 
@@ -51,8 +52,8 @@
         android:hint="@string/Contraseña"
         android:inputType="textPassword"
         android:singleLine="true"
-        android:textColor="@color/colorEscribir"
-        android:textColorHint="@color/whiteChalk"
+        android:textColor="@color/blueChalk"
+        android:textColorHint="@color/colorTextHint"
         android:textSize="@dimen/mediumText"
         android:textStyle="italic" />
 
@@ -74,7 +75,7 @@
         android:layout_height="wrap_content"
         android:padding="15dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:background="@color/yellowChalk"
         android:text="@string/Entrar"
         android:textSize="@dimen/mediumText" />

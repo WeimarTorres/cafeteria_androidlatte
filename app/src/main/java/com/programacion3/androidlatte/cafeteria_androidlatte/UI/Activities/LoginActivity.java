@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
             intent = new Intent(this, RegisterActivity.class);
             startActivity(intent);
         } else if (view.getId() == R.id.enter) {
-            if (code.getText().toString() != "") {
+            if (code.getText().equals("")) {
                 if (!esAdministrativo(Integer.parseInt(code.getText().toString())) && verificarDatos(user.getText().toString(), password.getText().toString())) {
                     user.setText("");
                     password.setText("");

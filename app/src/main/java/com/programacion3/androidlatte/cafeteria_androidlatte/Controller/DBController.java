@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Item;
+import com.programacion3.androidlatte.cafeteria_androidlatte.Models.ItemReservas;
 import com.programacion3.androidlatte.cafeteria_androidlatte.Models.Usuario;
 import com.programacion3.androidlatte.cafeteria_androidlatte.R;
 
@@ -23,9 +24,7 @@ public class DBController extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("CREATE TABLE 'USUARIOS' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Usuario' TEXT, 'CodigoUPB' INTEGER UNIQUE, 'Contraseña' TEXT, 'esAdministrador' INTEGER)");
-        //Codigo UPB? Para relacionar tabla
         sqLiteDatabase.execSQL("CREATE TABLE 'INVENTARIO' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Codigo' INTEGER UNIQUE, 'Nombre' TEXT, 'Cantidad' INTEGER, 'Precio' INTEGER, 'Imagen' INTEGER)");
-        //TODO Horario con datetime()
         sqLiteDatabase.execSQL("CREATE TABLE 'RESERVAS' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'CodigoUPB' INTEGER, 'Codigo' INTEGER, 'Horario' TEXT)");
 
         insertAdmin(sqLiteDatabase, "Adela1", 1, "1234");
@@ -39,8 +38,6 @@ public class DBController extends SQLiteOpenHelper {
         insertAdmin(sqLiteDatabase, "Adela9", 9, "1234");
         insertAdmin(sqLiteDatabase, "Adela10", 10, "12345");
 
-        //TODO insertar comidas
-        //ejemplo
         insertFood(sqLiteDatabase, 101, "Leche", 20, 5, R.drawable.soda);
         insertFood(sqLiteDatabase, 102, "Panqueque", 20, 5, R.drawable.panqueques);
         insertFood(sqLiteDatabase, 201, "Milanesa", 20, 5, R.drawable.comidastipicasargentinamilanesa);
@@ -132,8 +129,6 @@ public class DBController extends SQLiteOpenHelper {
         }
     }
 
-    //CREATE TABLE 'INVENTARIO' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'Codigo' INTEGER UNIQUE, 'Nombre' TEXT, 'Cantidad' INTEGER, 'Precio' INTEGER)
-
     private void insertFood(SQLiteDatabase database, int codeFood, String name, int quantity, int price, int image) {
         try {
             ContentValues contentValues = new ContentValues();
@@ -160,12 +155,46 @@ public class DBController extends SQLiteOpenHelper {
     }
 
     public Item selectItem(int codeFood) {
-        Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM INVENTARIO WHERE Codigo = " + codeFood, null);
-        cursor.moveToFirst();
-        Item item = new Item(cursor.getInt(1), cursor.getString(2), cursor.getInt(3), cursor.getInt(4), cursor.getInt(5));
-        return item;
+        try {
+            Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM INVENTARIO WHERE Codigo = " + codeFood, null);
+            cursor.moveToFirst();
+            Item item = new Item(cursor.getInt(1), cursor.getString(2), cursor.getInt(3), cursor.getInt(4), cursor.getInt(5));
+            return item;
+        } catch (IndexOutOfBoundsException e) {
+            return new Item(-1, "Error", 0, 0, 0);
+        }
+    }
+
+    //CREATE TABLE 'RESERVAS' ('_id' INTEGER PRIMARY KEY AUTOINCREMENT, 'CodigoUPB' INTEGER, 'Codigo' INTEGER, 'Horario' TEXT)
+
+    private void insertReserve(int codeUPB, int codeFood, String time) {
+        try {
+            ContentValues contentValues = new ContentValues();
+
+            contentValues.put("CodigoUPB", codeUPB);
+            contentValues.put("Codigo", codeFood);
+            contentValues.put("Horario", time);
+
+            getReadableDatabase().insertOrThrow("RESERVAS", null, contentValues);
+        } catch (SQLException e) {
+            throw e;
+        }
+    }
+
+    public List<ItemReservas> selectAllItemReservas() {
+        try {
+            List<ItemReservas> itemReservasList = new LinkedList<>();
+            Cursor cursor = getReadableDatabase().rawQuery("SELECT * FROM RESERVAS", null);
+            while (cursor.moveToNext()) {
+                Usuario user = selectUser(cursor.getInt(1));
+                Item item = selectItem(cursor.getInt(2));
+                itemReservasList.add(new ItemReservas(user.getUsername(), user.getCodigo(), item.getCodeFood(),
+                        item.getName(), item.getPrice(), item.getImage(), cursor.getString(3)));
+            }
+            return itemReservasList;
+        } catch (IndexOutOfBoundsException e) {
+            return new LinkedList<>();
+        }
     }
 
 }
-
-

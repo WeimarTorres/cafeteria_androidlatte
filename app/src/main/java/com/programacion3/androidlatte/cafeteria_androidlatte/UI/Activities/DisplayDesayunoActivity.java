@@ -45,6 +45,8 @@ public class DisplayDesayunoActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(DisplayDesayunoActivity.this, SeleccionDeProductosActivity.class);
+                Item item = (Item) adapterView.getItemAtPosition(i);
+                intent.putExtra("itemSelected", item);
                 startActivity(intent);
             }
         });

@@ -23,7 +23,6 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
     private TextView texto5;
     private Typeface Real;
 
-    private Memoria memoria;
     private Item itemSeleccionado;
     private TextView nombre;
     private TextView precio;
@@ -35,8 +34,7 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
         setContentView(R.layout.activity_seleccion_de_productos);
 
         Intent intent = getIntent();
-        memoria = (Memoria) intent.getSerializableExtra("memoria");
-        itemSeleccionado = (Item) intent.getSerializableExtra("itemSeleccionado");
+        itemSeleccionado = (Item) intent.getSerializableExtra("itemSelected");
 
         nombre = findViewById(R.id.nombreSeleccion);
         precio =findViewById(R.id.precioSeleccion);
@@ -71,12 +69,7 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
             builder.setPositiveButton("SI", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    //TODO hacer que se pase de displayActivity el item seleccionado
-                    memoria.setItemReserva(itemSeleccionado);
                     dialogInterface.dismiss();
-                    Intent resultIntent = new Intent();
-                    resultIntent.putExtra("memoria", memoria);
-                    setResult(RESULT_OK, resultIntent);
                     finish();
                 }
             });
@@ -92,11 +85,4 @@ public class SeleccionDeProductosActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent resultIntent = new Intent();
-        resultIntent.putExtra("memoria", memoria);
-        setResult(RESULT_OK, resultIntent);
-        finish();
-    }
 }

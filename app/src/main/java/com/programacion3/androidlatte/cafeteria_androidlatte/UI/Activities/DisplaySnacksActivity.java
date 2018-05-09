@@ -45,6 +45,8 @@ public class DisplaySnacksActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(DisplaySnacksActivity.this, SeleccionDeProductosActivity.class);
+                Item item = (Item) adapterView.getItemAtPosition(i);
+                intent.putExtra("itemSelected", item);
                 startActivity(intent);
             }
         });
